@@ -27,15 +27,22 @@
         <%-- TODO : 대문 바꾸기 --%>
     </div>
     <div class="row d-flex flex-direction-column">
-        <a href="/sign-up-page" class="btn btn-primary m-3">회원 가입</a>
+        <a href="/tosignuppage" class="btn btn-primary m-3">회원 가입</a>
         <c:if test="${empty member}">
-            <a href="/log-in-page" class="btn btn-warning m-3">로그인</a>
+            <a href="/tologinpage" class="btn btn-warning m-3">로그인</a>
         </c:if>
         <c:if test="${!empty member}">
-            <a href="/log-out" class="btn btn-warning m-3">로그아웃</a>
+            <a href="/logout" class="btn btn-warning m-3">로그아웃</a>
+            <a href="/tomypage" class="btn btn-warning m-3">마이페이지</a>
         </c:if>
     </div>
 </div>
+
+<script>
+    <c:if test="${!empty msg}">
+        alert("${msg}");
+    </c:if>
+</script>
 </body>
 <%@include file="includes/footer.jsp" %>
 </html>

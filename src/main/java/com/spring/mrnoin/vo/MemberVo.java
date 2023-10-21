@@ -30,7 +30,6 @@ public class MemberVo {
     private String nickname;
     @NotNull
     @NotBlank(message = "이메일을 입력해주세요.")
-    @Email
     private String email;
     @NotNull
     @Range(min = 18, max = 100, message = "18~100살만 가입 가능합니다.")

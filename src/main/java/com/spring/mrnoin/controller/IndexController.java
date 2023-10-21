@@ -15,20 +15,25 @@ public class IndexController {
         return "index";
     }
 
-    @RequestMapping("/log-in-page")
+    @RequestMapping("/tologinpage")
     public String loginForm(){
         return "log-in";
     }
 
-    @RequestMapping("/sign-up-page")
+    @RequestMapping("/tosignuppage")
     public String signUpForm(){
         return "sign-up";
     }
 
-    @RequestMapping("/log-out")
+    @RequestMapping("/logout")
     public String logOut(HttpSession session){
         session.removeAttribute("member");
         return "index";
+    }
+
+    @RequestMapping("/tomypage")
+    public String myPage(){
+        return "mypage";
     }
 
 }

@@ -4,7 +4,7 @@
 <body>
     <div class="container">
         <h2>로그인</h2>
-        <form method="post" action="log-in-confirm">
+        <form method="post" action="loginconfirm">
             <div class="form-floating mb-3">
                 <input type="text" class="form-control" id="floating_input_login_id" name="id">
                 <label for="floating_input_login_id">ID</label>

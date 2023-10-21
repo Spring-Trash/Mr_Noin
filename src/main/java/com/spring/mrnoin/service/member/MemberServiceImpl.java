@@ -12,7 +12,37 @@ public class MemberServiceImpl implements MemberService{
     @Autowired
     private MemberRepository memberRepository;
     @Override
-    public MemberVo getOneMemberById(MemberLoginVO memberLoginVO) {
-        return memberRepository.getOneMemberById(memberLoginVO.getId(), memberLoginVO.getPassword());
+    public MemberVo getOneMemberToLogin(MemberLoginVO memberLoginVO) {
+        return memberRepository.getOneMemberToLogin(memberLoginVO.getId(), memberLoginVO.getPassword());
     }
+
+    @Override
+    public int getOneMemberById(String id) {
+        return memberRepository.getOneMemberById(id);
+    }
+
+    @Override
+    public int signUp(MemberVo memberVo) {
+        return memberRepository.signUp(
+                memberVo.getId(),
+                memberVo.getPassword(),
+                memberVo.getNickname(),
+                memberVo.getEmail(),
+                memberVo.getAge(),
+                memberVo.getStatus());
+    }
+
+    @Override
+    public int memberUpdate(MemberVo memberVo) {
+        return memberRepository.memberUpdate(
+                memberVo.getId(),
+                memberVo.getPassword(),
+                memberVo.getNickname(),
+                memberVo.getEmail(),
+                memberVo.getAge(),
+                memberVo.getStatus()
+        );
+    }
+
+
 }

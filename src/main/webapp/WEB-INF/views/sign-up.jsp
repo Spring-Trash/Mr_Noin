@@ -8,9 +8,9 @@
 
     <h2>회원 가입</h2>
 <%--    TODO action을 채워 넣으세요--%>
-    <form method="post" action="">
+    <form method="post" action="register">
         <div class="form-floating mb-3">
-            <input type="text" class="form-control" id="floating_input_login_id" name="loginId">
+            <input type="text" class="form-control" id="floating_input_login_id" name="id">
             <label for="floating_input_login_id">ID</label>
         </div>
 
@@ -25,13 +25,18 @@
         </div>
 
         <div class="form-floating mb-3">
-            <input type="text" class="form-control" id="floating_input_user_name" name="name">
-            <label for="floating_input_user_name">username</label>
+            <input type="text" class="form-control" id="floating_input_nickname" name="nickname">
+            <label for="floating_input_nickname">nickname</label>
         </div>
 
         <div class="form-floating mb-3">
-            <input type="text" class="form-control" id="floating_input_nickname" name="nickname">
-            <label for="floating_input_nickname">nickname</label>
+            <input type="text" class="form-control" id="floating_input_age" name="age">
+            <label for="floating_input_age">age</label>
+        </div>
+
+        <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="floating_input_status" name="status">
+            <label for="floating_input_status">status</label>
         </div>
         <button class="btn btn-primary">전송</button>
         <a href="/" class="btn btn-danger">뒤로가기</a>
@@ -39,7 +44,11 @@
 
 </div>
 
-
+<script>
+    <c:if test="${!empty msg}">
+        alert("${msg}");
+    </c:if>
+</script>
 </body>
 <%@include file="includes/footer.jsp"%>
 </html>

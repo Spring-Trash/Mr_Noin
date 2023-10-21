@@ -4,5 +4,8 @@ import com.spring.mrnoin.vo.MemberLoginVO;
 import com.spring.mrnoin.vo.MemberVo;
 
 public interface MemberService {
-    MemberVo getOneMemberById(MemberLoginVO memberLoginVO);
+    MemberVo getOneMemberToLogin(MemberLoginVO memberLoginVO);
+    int getOneMemberById(String id);
+    int signUp(MemberVo memberVo);
+    int memberUpdate(MemberVo memberVo);
 }
