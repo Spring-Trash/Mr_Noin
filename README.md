@@ -12,10 +12,10 @@
 | 이름                  | O/X |
 |---------------------|-----|
 | MemberRepository 생성 | O   |
-| Controller 구성       | X   |
-| Service 생성          | X   |
-| Repository          | X   |
-| JSP파일 수정            | X   |
+| Controller 구성       | O   |
+| Service 생성          | O   |
+| Repository          | O   |
+| JSP파일 수정            | O   |
 
 ## Git Update Convention
 
@@ -37,3 +37,4 @@
 | 날짜          | 버전  | 작성자          | 설명               |
 |-------------|-----|--------------|------------------|
 | 2023-10-20  | 0.1 | 한규준 | DB연동, Login기능 추가 |
+ | 2023-10-20 | 0.2 | 한규준 | SignUp, MemberInfoUpdate 기능추가 |
