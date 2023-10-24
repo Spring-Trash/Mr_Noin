@@ -39,7 +39,7 @@ WEEK1 Branch : dev_one
 |Login - 1|클라이언트에서 1차 사번, pwd에 대한 유효성 검사를 진행해야 한다.|X||
 |Login - 2|Filter로 사번, pwd에 대한 유효성 검사를 진행해야 한다.|X||
 |Login - 3|Filter 인증 절차를 수행하고 Session을 추가한다.|X|HttpSession 혹은 SpringSecurity를 이용한다.|
-|Login - 4|InterCeptor로 각 기능별 수행시간을 측정한다.|X|기능별 수행시간 1초 이내|
+|Login - 4|InterCeptor 및 AOP로 각 기능별 수행시간을 측정한다.|X|기능별 수행시간 1초 이내|
 |Login - 5|Login 이후 Role별 접근 가능/가시 메뉴를 설정한다.|X||
 |Register - 1|클라이언트에서 각 사원의 Attribute에 대한 유효성 검사를 진행해야 한다.|X||
 |Register - 2|email 혹은 전화번호에 대한 인증 절차를 진행해야 한다.|X||
