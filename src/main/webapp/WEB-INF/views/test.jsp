@@ -28,6 +28,7 @@
             <a href="/logout" class="btn btn-warning m-3">로그아웃</a>
             <a href="/tomypage" class="btn btn-warning m-3">마이페이지</a>
         </c:if>
+
     </div>
 </div>
 
