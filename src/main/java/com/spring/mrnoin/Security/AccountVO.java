@@ -1,4 +1,4 @@
-package com.spring.mrnoin.Security;
+package com.spring.mrnoin.security;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -9,7 +9,6 @@ import org.springframework.security.core.userdetails.UserDetails;
 
 import java.util.ArrayList;
 import java.util.Collection;
-import java.util.Collections;
 
 @Data
 @NoArgsConstructor

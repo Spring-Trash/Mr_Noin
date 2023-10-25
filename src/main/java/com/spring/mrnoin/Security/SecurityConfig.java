@@ -1,4 +1,4 @@
-package com.spring.mrnoin.Security;
+package com.spring.mrnoin.security;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,7 +30,7 @@ public class SecurityConfig{
                 // 회원가입은 예외로
                 .authorizeHttpRequests(request -> request
                         .dispatcherTypeMatchers(DispatcherType.FORWARD).permitAll()
-                        .antMatchers("/tosignuppage", "/status", "/iddupcheck", "/register").permitAll()
+                        .antMatchers("/tosignuppage", "/status", "/iddupcheck", "/register", "/resources/**").permitAll()
                         .anyRequest().authenticated()
                 )
                 // 인증 없으면 보내버릴 기본 로그인 페이지
@@ -44,7 +44,10 @@ public class SecurityConfig{
                         .defaultSuccessUrl("/", true)
                         .permitAll()
                 )
-                .logout(withDefaults());
+                .logout()
+                .logoutUrl("/logout")
+                .logoutSuccessUrl("/login")
+                .deleteCookies("JSESSIONID", "remember-me");
         return httpSecurity.build();
     }
 

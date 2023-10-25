@@ -1,10 +1,11 @@
-package com.spring.mrnoin.Security;
+package com.spring.mrnoin.security;
 
 import com.spring.mrnoin.vo.AccountLoginVO;
+import org.springframework.security.core.userdetails.User;
 
 public interface AccountService {
     AccountVO getAcoountVOById(String username);
-    AccountVO getOneAccountToLogin(AccountLoginVO accountLoginVO);
+    User getOneAccountToLogin(AccountLoginVO accountLoginVO);
     int signUp(String userId, String password, String nickName, String email, int age, String status);
 
     int updateAccount(AccountVO accountVO);

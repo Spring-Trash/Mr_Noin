@@ -11,13 +11,12 @@
         <br>
         <br>
         <br>
-        <c:if test="${empty account}">
-            <h1>로그인 해라</h1>
-        </c:if>
-        <c:if test="${!empty account}">
             <h1>안 녕</h1>
             <h3>상태메시지 : ${account.status}</h3>
-        </c:if>
+            <img src="../../resources/developer.png" style="height : 200px; width : 200px;"/>
+            <h2>이 개발자가</h2>
+            <h2>배부르다는 것을 알까요...?</h2>
+            <h2>Donate Here...</h2>
         <br>
         <br>
         <br>

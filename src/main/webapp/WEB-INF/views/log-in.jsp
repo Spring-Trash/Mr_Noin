@@ -3,7 +3,19 @@
 <%@include file="includes/header.jsp"%>
 <body>
     <div class="container">
-        <h2>로그인</h2>
+        <div style="text-align: center; align-content: center; vertical-align: center; align-items: center">
+            <br>
+            <br>
+            <hr>
+            <br>
+            <br>
+            <div style="margin : auto; border : solid 1px grey; width : fit-content; padding: 10px;">
+        <h1>로그인</h1>
+        <h1>해주세</h1>
+        <h1>요제발</h1>
+            </div>
+        </div>
+        <br><br><hr><br>
         <form method="post" action="loginconfirm">
             <div class="form-floating mb-3">
                 <input type="text" class="form-control" id="floating_input_login_id" name="id">

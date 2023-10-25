@@ -1,4 +1,4 @@
-package com.spring.mrnoin.Security;
+package com.spring.mrnoin.security;
 
 import org.springframework.security.core.GrantedAuthority;
 

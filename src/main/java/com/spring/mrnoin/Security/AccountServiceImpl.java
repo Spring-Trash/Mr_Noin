@@ -1,14 +1,21 @@
-package com.spring.mrnoin.Security;
+package com.spring.mrnoin.security;
 
 import com.spring.mrnoin.vo.AccountLoginVO;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.core.userdetails.User;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.Collection;
 
+import static jdk.nashorn.internal.runtime.regexp.joni.Config.log;
+
 @Service
+@Slf4j
 public class AccountServiceImpl implements AccountService{
 
     @Autowired
@@ -24,10 +31,12 @@ public class AccountServiceImpl implements AccountService{
     }
 
     @Override
-    public AccountVO getOneAccountToLogin(AccountLoginVO accountLoginVO) {
+    public User getOneAccountToLogin(AccountLoginVO accountLoginVO) {
         accountLoginVO.setPassword(passwordEncoder.encode(accountLoginVO.getPassword()));
-        AccountVO rtnAccountVO = accountRepository.getOneAccountToLogin(accountLoginVO);
-        return rtnAccountVO;
+        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        User principal = (User) authentication.getPrincipal();
+
+        return principal;
     }
 
     @Override

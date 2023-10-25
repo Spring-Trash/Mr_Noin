@@ -1,7 +1,7 @@
 package com.spring.mrnoin.controller;
 
-import com.spring.mrnoin.Security.AccountService;
-import com.spring.mrnoin.Security.AccountVO;
+import com.spring.mrnoin.security.AccountService;
+import com.spring.mrnoin.security.AccountVO;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -38,7 +38,7 @@ public class RegisterController {
     @RequestMapping("/register")
     public String register(@Valid AccountVO accountVO, BindingResult bindingResult, Model model){
         if(bindingResult.hasErrors()){
-            model.addAttribute("msg", "입력정보를 확인해주세요");
+            model.addAttribute( "msg", "입력정보를 확인해주세요");
             return "sign-up";
         }
 

@@ -9,6 +9,10 @@ spring:
     username : ssafy
     password : ssafy
 
+logging:
+  level:
+    root: info
+
 #mybatis:
 #  type-aliases-package: com.spring.mrnoin.vo
 #  mapper-locations: mybatis/mapper/**/*.xml
