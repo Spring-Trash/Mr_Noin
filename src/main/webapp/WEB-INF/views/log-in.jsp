@@ -16,6 +16,7 @@
             <button class="btn btn-primary">전송</button>
             <a href="/" class="btn btn-danger">뒤로가기</a>
         </form>
+        <a href="/tosignuppage" class="btn btn-primary">회원가입</a>
     </div>
 <script>
     <c:if test="${!empty msg}">

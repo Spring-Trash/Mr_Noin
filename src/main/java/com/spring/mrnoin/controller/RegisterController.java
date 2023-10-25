@@ -1,7 +1,7 @@
 package com.spring.mrnoin.controller;
 
-import com.spring.mrnoin.service.member.MemberService;
-import com.spring.mrnoin.vo.MemberVo;
+import com.spring.mrnoin.Security.AccountService;
+import com.spring.mrnoin.Security.AccountVO;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -15,7 +15,7 @@ import javax.validation.Valid;
 @Slf4j
 public class RegisterController {
     @Autowired
-    MemberService memberService;
+    AccountService accountService;
 
     @RequestMapping("/iddupcheck")
     public String idDuplicationcheck(String id, Model model){
@@ -24,9 +24,9 @@ public class RegisterController {
             return "sign-up";
         }
 
-        int dupCheck = memberService.getOneMemberById(id);
+        AccountVO dupCheck = accountService.getAcoountVOById(id);
 
-        if(dupCheck == 0) {
+        if(dupCheck == null) {
             model.addAttribute("msg", "중복되지 않은 ID입니다.");
             return "sign-up";
         }
@@ -36,16 +36,18 @@ public class RegisterController {
         }
     }
     @RequestMapping("/register")
-    public String register(@Valid MemberVo memberVo, BindingResult bindingResult, Model model){
+    public String register(@Valid AccountVO accountVO, BindingResult bindingResult, Model model){
         if(bindingResult.hasErrors()){
             model.addAttribute("msg", "입력정보를 확인해주세요");
             return "sign-up";
         }
 
-        int dupCheck = memberService.getOneMemberById(memberVo.getId());
+        AccountVO dupCheck = accountService.getAcoountVOById(accountVO.getUsername());
 
-        if(dupCheck == 0){
-            int result = memberService.signUp(memberVo);
+        if(dupCheck == null){
+            int result = accountService.signUp(accountVO.getUsername()
+                    , accountVO.getPassword(), accountVO.getNickname()
+                    , accountVO.getEmail(), accountVO.getAge(), accountVO.getStatus());
             if(result == 1){
                 model.addAttribute("msg", "회원가입 완료");
                 return "redirect:/";

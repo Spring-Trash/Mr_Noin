@@ -36,4 +36,7 @@ public class IndexController {
         return "mypage";
     }
 
+    @RequestMapping("/noview")
+    public String noview(){return "test"; }
+
 }

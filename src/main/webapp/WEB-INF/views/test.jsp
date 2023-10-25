@@ -11,26 +11,18 @@
         <br>
         <br>
         <br>
-        <c:if test="${empty account}">
-            <h1>로그인 해라</h1>
-        </c:if>
-        <c:if test="${!empty account}">
-            <h1>안 녕</h1>
-            <h3>상태메시지 : ${account.status}</h3>
-        </c:if>
+        <h1>비로그인시 들어와지면 안됨</h1>
         <br>
         <br>
         <br>
         <br>
         <br>
         <br>
-        <%-- TODO : 대문 바꾸기 --%>
     </div>
     <div class="row d-flex flex-direction-column">
+        <a href="/tosignuppage" class="btn btn-primary m-3">회원 가입</a>
         <c:if test="${empty account}">
-            <a href="/tosignuppage" class="btn btn-primary m-3">회원 가입</a>
             <a href="/tologinpage" class="btn btn-warning m-3">로그인</a>
-            <a href="/noview" class="btn btn-warning m-3">테스트</a>
         </c:if>
         <c:if test="${!empty account}">
             <a href="/logout" class="btn btn-warning m-3">로그아웃</a>
@@ -41,7 +33,7 @@
 
 <script>
     <c:if test="${!empty msg}">
-        alert("${msg}");
+    alert("${msg}");
     </c:if>
 </script>
 </body>

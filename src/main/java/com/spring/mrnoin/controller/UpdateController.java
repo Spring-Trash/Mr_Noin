@@ -1,7 +1,7 @@
 package com.spring.mrnoin.controller;
 
-import com.spring.mrnoin.service.member.MemberService;
-import com.spring.mrnoin.vo.MemberVo;
+import com.spring.mrnoin.Security.AccountService;
+import com.spring.mrnoin.Security.AccountVO;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -17,16 +17,16 @@ import javax.validation.Valid;
 public class UpdateController {
 
     @Autowired
-    MemberService memberService;
+    AccountService accountService;
 
-    @RequestMapping("/memberupdate")
-    public String memberUpdate(@Valid MemberVo memberVo, BindingResult bindingResult, Model model, HttpSession session){
+    @RequestMapping("/accountupdate")
+    public String memberUpdate(@Valid AccountVO accountVO, BindingResult bindingResult, Model model, HttpSession session){
         if(bindingResult.hasErrors()){
             model.addAttribute("msg", "입력정보를 확인해주세요.");
             return "toupdatepage";
         }
 
-        int result = memberService.memberUpdate(memberVo);
+        int result = accountService.updateAccount(accountVO);
 
         if(result == 0){
             model.addAttribute("msg", "업데이트에 문제가 발생했습니다.");
@@ -34,8 +34,8 @@ public class UpdateController {
         }
         else {
             model.addAttribute("msg", "업데이트 성공");
-            session.removeAttribute("member");
-            session.setAttribute("member", memberVo);
+            session.removeAttribute("account");
+            session.setAttribute("account", accountVO);
             return "redirect:/";
         }
     }

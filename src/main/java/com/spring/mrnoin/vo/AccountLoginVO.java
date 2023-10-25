@@ -13,7 +13,7 @@ import javax.validation.constraints.Size;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class MemberLoginVO {
+public class AccountLoginVO {
     @NotNull
     @NotBlank(message = "id는 4자 이상 20자 이하입니다.")
     @Size(message = "id는 4자 이상 20자 이하입니다.")

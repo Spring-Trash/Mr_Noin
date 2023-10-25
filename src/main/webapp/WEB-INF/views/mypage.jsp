@@ -14,7 +14,7 @@
     <%--    TODO 각 input의 value를 채워 넣으세요--%>
     <div class="form-floating mb-3">
         <input readonly type="text" class="form-control" id="floating_input_login_id" name="id"
-               value="${member.id}">
+               value="${account.id}">
         <label for="floating_input_login_id">ID</label>
     </div>
     <div class="form-floating mb-3">
@@ -23,19 +23,19 @@
     </div>
     <div class="form-floating mb-3">
         <input readonly type="text" class="form-control" id="floating_input_nickname" name="nickname"
-               value="${member.nickname}">
+               value="${account.nickname}">
         <label for="floating_input_nickname">Nickname</label>
     </div>
     <div class="form-floating mb-3">
-        <input readonly type="text" class="form-control" id="floating_input_email" name="email" vaule="${member.email}">
+        <input readonly type="text" class="form-control" id="floating_input_email" name="email" vaule="${account.email}">
         <label for="floating_input_email">Email</label>
     </div>
     <div class="form-floating mb-3">
-        <input readonly type="text" class="form-control" id="floating_input_age" name="age" value="${member.age}">
+        <input readonly type="text" class="form-control" id="floating_input_age" name="age" value="${account.age}">
         <label for="floating_input_age">Age</label>
     </div>
     <div class="form-floating mb-3">
-        <input readonly type="text" class="form-control" id="floating_input_status" name="status" value="${member.status}">
+        <input readonly type="text" class="form-control" id="floating_input_status" name="status" value="${account.status}">
         <label for="floating_input_status">Status</label>
     </div>
     <%--    TODO 수정하기 버튼을 완성하세요 (어디로 이동할 지 정하세요)--%>
