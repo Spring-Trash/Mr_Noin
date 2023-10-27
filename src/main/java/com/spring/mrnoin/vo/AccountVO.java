@@ -1,4 +1,4 @@
-package com.spring.mrnoin.security;
+package com.spring.mrnoin.vo;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

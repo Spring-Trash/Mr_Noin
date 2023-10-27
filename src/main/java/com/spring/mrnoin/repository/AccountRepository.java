@@ -1,6 +1,7 @@
-package com.spring.mrnoin.security;
+package com.spring.mrnoin.repository;
 
 import com.spring.mrnoin.vo.AccountLoginVO;
+import com.spring.mrnoin.vo.AccountVO;
 import org.apache.ibatis.annotations.*;
 
 @Mapper
