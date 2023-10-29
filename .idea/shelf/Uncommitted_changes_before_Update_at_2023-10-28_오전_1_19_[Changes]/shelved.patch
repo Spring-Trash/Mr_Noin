@@ -1,0 +1,55 @@
+Index: src/main/java/com/spring/mrnoin/Security/SecurityConfig.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.spring.mrnoin.security;\r\n\r\n\r\nimport org.springframework.beans.factory.annotation.Autowired;\r\nimport org.springframework.context.annotation.Bean;\r\nimport org.springframework.context.annotation.Configuration;\r\nimport org.springframework.security.config.annotation.web.builders.HttpSecurity;\r\nimport org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;\r\nimport org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;\r\nimport org.springframework.security.crypto.password.PasswordEncoder;\r\nimport org.springframework.security.web.SecurityFilterChain;\r\n\r\nimport javax.servlet.DispatcherType;\r\n\r\nimport static org.springframework.security.config.Customizer.withDefaults;\r\n\r\n@Configuration\r\n@EnableWebSecurity\r\npublic class SecurityConfig{\r\n    @Bean\r\n    PasswordEncoder passwordEncoder(){\r\n        return new BCryptPasswordEncoder();\r\n    }\r\n\r\n    @Bean\r\n    public SecurityFilterChain filterChain(HttpSecurity httpSecurity) throws Exception{\r\n        httpSecurity.csrf().disable().cors().disable()\r\n                // csrf, cors disable\r\n                // 모든 요청에 대해 인증\r\n                // 회원가입은 예외로\r\n                .authorizeHttpRequests(request -> request\r\n                        .dispatcherTypeMatchers(DispatcherType.FORWARD).permitAll()\r\n                        .antMatchers(\"/tosignuppage\", \"/status\", \"/iddupcheck\", \"/register\", \"/resources/**\").permitAll()\r\n                        .anyRequest().authenticated()\r\n                )\r\n                // 인증 없으면 보내버릴 기본 로그인 페이지\r\n                // submit받는 url, 파라미터 등록\r\n                // id, pw는 jsp name과 같이\r\n                .formLogin(login -> login\r\n                        .loginPage(\"/tologinpage\")\r\n                        .loginProcessingUrl(\"/loginconfirm\")\r\n                        .usernameParameter(\"id\")\r\n                        .passwordParameter(\"password\")\r\n                        .defaultSuccessUrl(\"/\", true)\r\n                        .permitAll()\r\n                )\r\n                .logout()\r\n                .logoutUrl(\"/logout\")\r\n                .logoutSuccessUrl(\"/login\")\r\n                .deleteCookies(\"JSESSIONID\", \"remember-me\");\r\n        return httpSecurity.build();\r\n    }\r\n\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/spring/mrnoin/Security/SecurityConfig.java b/src/main/java/com/spring/mrnoin/Security/SecurityConfig.java
+--- a/src/main/java/com/spring/mrnoin/Security/SecurityConfig.java	(revision 320a3708565a767d4ace3b5f41a35da3e6d17c2a)
++++ b/src/main/java/com/spring/mrnoin/Security/SecurityConfig.java	(date 1698330618842)
+@@ -1,7 +1,5 @@
+ package com.spring.mrnoin.security;
+ 
+-
+-import org.springframework.beans.factory.annotation.Autowired;
+ import org.springframework.context.annotation.Bean;
+ import org.springframework.context.annotation.Configuration;
+ import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+@@ -12,8 +10,6 @@
+ 
+ import javax.servlet.DispatcherType;
+ 
+-import static org.springframework.security.config.Customizer.withDefaults;
+-
+ @Configuration
+ @EnableWebSecurity
+ public class SecurityConfig{
+@@ -21,7 +17,6 @@
+     PasswordEncoder passwordEncoder(){
+         return new BCryptPasswordEncoder();
+     }
+-
+     @Bean
+     public SecurityFilterChain filterChain(HttpSecurity httpSecurity) throws Exception{
+         httpSecurity.csrf().disable().cors().disable()
+Index: .idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"ExternalStorageConfigurationManager\" enabled=\"true\" />\r\n  <component name=\"MavenProjectsManager\">\r\n    <option name=\"originalFiles\">\r\n      <list>\r\n        <option value=\"$PROJECT_DIR$/pom.xml\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"ProjectRootManager\" version=\"2\" languageLevel=\"JDK_17\" default=\"true\" project-jdk-name=\"17\" project-jdk-type=\"JavaSDK\">\r\n    <output url=\"file://$PROJECT_DIR$/out\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/misc.xml b/.idea/misc.xml
+--- a/.idea/misc.xml	(revision 320a3708565a767d4ace3b5f41a35da3e6d17c2a)
++++ b/.idea/misc.xml	(date 1698234510634)
+@@ -8,7 +8,7 @@
+       </list>
+     </option>
+   </component>
+-  <component name="ProjectRootManager" version="2" languageLevel="JDK_17" default="true" project-jdk-name="17" project-jdk-type="JavaSDK">
++  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="17" project-jdk-type="JavaSDK">
+     <output url="file://$PROJECT_DIR$/out" />
+   </component>
+ </project>
+\ No newline at end of file
