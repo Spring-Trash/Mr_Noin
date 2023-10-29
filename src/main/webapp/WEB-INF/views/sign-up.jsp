@@ -38,7 +38,7 @@
             <input type="text" class="form-control" id="floating_input_status" name="status">
             <label for="floating_input_status">status</label>
         </div>
-        <button class="btn btn-primary">전송</button>
+        <button type="submit" class="btn btn-primary">전송</button>
         <a href="/" class="btn btn-danger">뒤로가기</a>
     </form>
 

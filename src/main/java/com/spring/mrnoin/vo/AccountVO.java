@@ -59,9 +59,7 @@ public class AccountVO implements UserDetails {
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
-        Collection<GrantedAuthority> collection = new ArrayList<>();
-        collection.add(() -> {return role;});
-        return collection;
+        return authorities;
     }
 
     @Override
