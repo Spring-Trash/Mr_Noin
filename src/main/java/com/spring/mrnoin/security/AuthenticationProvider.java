@@ -31,6 +31,7 @@ public class AuthenticationProvider implements org.springframework.security.auth
         AccountVO accountVO = (AccountVO) userDetailsService.loadUserByUsername(userId);
 
         if(passwordEncoder.matches(userPw, accountVO.getPassword())){
+            System.out.println(accountVO.getAuthorities());
             return new UsernamePasswordAuthenticationToken(userId, userPw, accountVO.getAuthorities());
         } else {
             throw new BadCredentialsException(accountVO.getId() + "Invalid Password");

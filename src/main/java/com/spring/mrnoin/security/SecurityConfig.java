@@ -12,6 +12,7 @@ import org.springframework.security.authentication.ProviderManager;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityCustomizer;
+import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
@@ -41,6 +42,17 @@ public class SecurityConfig{
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity httpSecurity) throws Exception{
 
+        // 토큰을 사용하는 경우
+
+        // 인터셉터에서 유효성 검사를 할 것이므로, 일단 통과시킨다.
+        httpSecurity.authorizeRequests().anyRequest().permitAll();
+
+        // 토큰을 사용하는 경우 세션을 사용하지 않는다.
+        httpSecurity.sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
+        
+        // 인증 진행
+        httpSecurity.addFilterBefore(authenticationFilter(), UsernamePasswordAuthenticationFilter.class);
+        /*
         log.info("Spring Security Start----------------------");
 
         // 로그인, 회원가입 페이지 인가
@@ -66,6 +78,7 @@ public class SecurityConfig{
                 .invalidateHttpSession(true).logoutUrl("/logout")
                 .logoutSuccessUrl("/tologinpage").deleteCookies("JSESSIONID", "remember-me");
 
+         */
         return httpSecurity.build();
     }
 

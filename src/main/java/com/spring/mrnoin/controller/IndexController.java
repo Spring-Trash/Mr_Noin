@@ -64,27 +64,4 @@ public class IndexController {
     @RequestMapping("/noview")
     public String noview(){return "test"; }
 
-    @RequestMapping("/register")
-    public String register(@Valid AccountVO accountVO, BindingResult bindingResult, Model model){
-        System.out.println("register-----------------------------");
-        if(bindingResult.hasErrors()){
-            model.addAttribute( "msg", "입력정보를 확인해주세요");
-            return "sign-up";
-        }
-
-        if(accountService.getAccountVOById(accountVO.getUsername()) == null){
-            int result = accountService.signUp(accountVO);
-            if(result == 1){
-                model.addAttribute("msg", "회원가입 완료");
-                return "redirect:/";
-            } else {
-                model.addAttribute("msg", "회원가입 실패");
-                return "sign-up";
-            }
-        } else {
-            model.addAttribute("msg", "중복된 ID입니다.");
-            return "sign-up";
-        }
-    }
-
 }

@@ -17,33 +17,4 @@ import javax.validation.Valid;
 @Controller
 public class LoginController {
 
-//    @Autowired
-//    AccountService accountService;
-//
-//    @RequestMapping("/loginconfirm")
-//    public String loginConfirm(@Valid AccountLoginVO accountLoginVO, BindingResult bindingResult, Model model, HttpSession session){
-//
-//        // 1. 이상한 값 입력했는지 체크
-//        // 2. 회원가입한 id인지 체크
-//
-//        System.out.println("----------------------------------------------");
-//
-//        // TODO : Error 발생시 입력창에 입력해둔 정보는 유지해야 한다. -> 회원가입에서
-//        if(bindingResult.hasErrors()){
-//            model.addAttribute("msg", bindingResult);
-//            return "log-in";
-//        }
-//
-//        //User principal = accountService.getOneAccountToLogin(accountLoginVO);
-//        log.info(principal.toString());
-//
-//        if(principal == null){
-//            model.addAttribute("msg", "ID, Password를 확인해주세요.");
-//            return "log-in";
-//        }
-//        else {
-//            session.setAttribute("account", principal);
-//            return "redirect:/";
-//        }
-//    }
 }
