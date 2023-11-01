@@ -1,9 +1,7 @@
 package com.spring.mrnoin.security;
 
-import com.spring.mrnoin.controller.LoginController;
-import com.spring.mrnoin.repository.AccountRepository;
-import com.spring.mrnoin.vo.AccountLoginVO;
 import com.spring.mrnoin.vo.AccountVO;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
@@ -14,6 +12,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 
 import javax.annotation.Resource;
 
+@Slf4j
 public class AuthenticationProvider implements org.springframework.security.authentication.AuthenticationProvider {
 
     @Resource
@@ -24,6 +23,7 @@ public class AuthenticationProvider implements org.springframework.security.auth
 
     @Override
     public Authentication authenticate(Authentication authentication) throws AuthenticationException {
+        log.info("AuthenticationProvider : authenticate");
         UsernamePasswordAuthenticationToken token = (UsernamePasswordAuthenticationToken) authentication;
         String userId = token.getName();
         String userPw = (String) token.getCredentials();
@@ -31,7 +31,7 @@ public class AuthenticationProvider implements org.springframework.security.auth
         AccountVO accountVO = (AccountVO) userDetailsService.loadUserByUsername(userId);
 
         if(passwordEncoder.matches(userPw, accountVO.getPassword())){
-            System.out.println(accountVO.getAuthorities());
+            log.info("AccountVO ROLE : {}", accountVO.getRole());
             return new UsernamePasswordAuthenticationToken(userId, userPw, accountVO.getAuthorities());
         } else {
             throw new BadCredentialsException(accountVO.getId() + "Invalid Password");

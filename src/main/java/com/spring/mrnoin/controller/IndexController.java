@@ -50,12 +50,6 @@ public class IndexController {
         return "sign-up";
     }
 
-//    @RequestMapping("/logout")
-//    public String logOut(HttpSession session){
-//        session.removeAttribute("member");
-//        return "index";
-//    }
-
     @RequestMapping("/tomypage")
     public String myPage(){
         return "mypage";

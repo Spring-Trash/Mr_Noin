@@ -41,19 +41,7 @@ public class SecurityConfig{
 
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity httpSecurity) throws Exception{
-
-        // 토큰을 사용하는 경우
-
-        // 인터셉터에서 유효성 검사를 할 것이므로, 일단 통과시킨다.
-        httpSecurity.authorizeRequests().anyRequest().permitAll();
-
-        // 토큰을 사용하는 경우 세션을 사용하지 않는다.
-        httpSecurity.sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
-        
-        // 인증 진행
-        httpSecurity.addFilterBefore(authenticationFilter(), UsernamePasswordAuthenticationFilter.class);
-        /*
-        log.info("Spring Security Start----------------------");
+        log.info("SecurityConfig : filterChain");
 
         // 로그인, 회원가입 페이지 인가
         // 정적자원 인가
@@ -70,7 +58,7 @@ public class SecurityConfig{
         httpSecurity.formLogin()
                 .loginPage("/tologinpage").loginProcessingUrl("/tologinpage")
                 .usernameParameter("id").passwordParameter("password")
-                .defaultSuccessUrl("/asfsfasfsafsfs").failureUrl("/tologinpage")
+                .defaultSuccessUrl("/").failureUrl("/tologinpage")
                 .and().addFilterBefore(authenticationFilter(), UsernamePasswordAuthenticationFilter.class);
 
         // 로그아웃 설정
@@ -78,7 +66,6 @@ public class SecurityConfig{
                 .invalidateHttpSession(true).logoutUrl("/logout")
                 .logoutSuccessUrl("/tologinpage").deleteCookies("JSESSIONID", "remember-me");
 
-         */
         return httpSecurity.build();
     }
 

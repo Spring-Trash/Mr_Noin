@@ -1,6 +1,7 @@
 package com.spring.mrnoin.security;
 
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
@@ -14,6 +15,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 @RequiredArgsConstructor
+@Slf4j
 // 로그인시 여기로 요청이 온다.
 // id, pw 기반으로 UserPasswordAuthenticationToken 발급
 public class AuthenticationFilter extends UsernamePasswordAuthenticationFilter {
@@ -29,6 +31,7 @@ public class AuthenticationFilter extends UsernamePasswordAuthenticationFilter {
     public Authentication attemptAuthentication(HttpServletRequest request, HttpServletResponse response) throws AuthenticationException {
         // id, pw 기반으로 UsernamePAsswordAuthenticationToken 발급
         // UsernamePasswordAuthenticationToken principal : id, credential : password, detail(object) -> token context
+        log.info("AuthenticationFilter : attemptAuthentication");
         UsernamePasswordAuthenticationToken token = new UsernamePasswordAuthenticationToken(request.getParameter("id"), request.getParameter("password"));
         setDetails(request, token);
         return this.getAuthenticationManager().authenticate(token);
