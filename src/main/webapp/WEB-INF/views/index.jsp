@@ -26,15 +26,8 @@
         <%-- TODO : 대문 바꾸기 --%>
     </div>
     <div class="row d-flex flex-direction-column">
-        <c:if test="${empty account}">
-            <a href="/tosignuppage" class="btn btn-primary m-3">회원 가입</a>
-            <a href="/tologinpage" class="btn btn-warning m-3">로그인</a>
-            <a href="/noview" class="btn btn-warning m-3">테스트</a>
-        </c:if>
-        <c:if test="${!empty account}">
-            <a href="/logout" class="btn btn-warning m-3">로그아웃</a>
-            <a href="/tomypage" class="btn btn-warning m-3">마이페이지</a>
-        </c:if>
+        <button id="logout" class="btn btn-warning m-3">로그아웃</button>
+        <button id="tomypage" class="btn btn-warning m-3">마이페이지</button>
     </div>
 </div>
 
@@ -45,4 +38,25 @@
 </script>
 </body>
 <%@include file="includes/footer.jsp" %>
+<script>
+    document.getElementById("logout").addEventListener("click", function(){
+        localStorage.removeItem("jwt_Access");
+        localStorage.removeItem("jwt_Refresh");
+        location.href("/tologinpage");
+    })
+
+    document.getElementById("tomypage").addEventListener("click", function(){
+
+        let message = {
+            method : "GET",
+            headers : {
+                "Content-Type" : "application/json",
+                "jwt-auth-token" : localStorage.getItem("jwt_Access"),
+                "jwt-ref-token" : localStorage.getItem("jwt_Refresh"),
+            }
+        }
+
+        fetch("${root}/tomypage", message);
+    })
+</script>
 </html>

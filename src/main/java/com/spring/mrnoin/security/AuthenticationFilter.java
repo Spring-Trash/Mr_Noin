@@ -33,6 +33,7 @@ public class AuthenticationFilter extends UsernamePasswordAuthenticationFilter {
         // UsernamePasswordAuthenticationToken principal : id, credential : password, detail(object) -> token context
         log.info("AuthenticationFilter : attemptAuthentication");
         UsernamePasswordAuthenticationToken token = new UsernamePasswordAuthenticationToken(request.getParameter("id"), request.getParameter("password"));
+        log.info("id : {}, pw : {}", request.getParameter("id"), request.getParameter("password"));
         setDetails(request, token);
         return this.getAuthenticationManager().authenticate(token);
     }
