@@ -35,8 +35,6 @@ import java.io.IOException;
 @Slf4j
 public class SecurityConfig{
 
-    @Autowired
-    JwtUtil jwtUtil;
     @Bean
     PasswordEncoder passwordEncoder(){
         return new BCryptPasswordEncoder();
@@ -46,8 +44,6 @@ public class SecurityConfig{
     public SecurityFilterChain filterChain(HttpSecurity httpSecurity) throws Exception{
         log.info("SecurityConfig : filterChain");
 
-
-        /*
         // 로그인, 회원가입 페이지 인가
         // 정적자원 인가
         httpSecurity.authorizeRequests().antMatchers("/tologinpage", "/tosignuppage", "/status", "/iddupcheck", "/register").permitAll();
@@ -70,20 +66,6 @@ public class SecurityConfig{
         httpSecurity.logout()
                 .invalidateHttpSession(true).logoutUrl("/logout")
                 .logoutSuccessUrl("/tologinpage").deleteCookies("JSESSIONID", "remember-me");
-
-
-
-         */
-
-        httpSecurity.authorizeRequests().antMatchers("**/js/**").permitAll();
-
-        httpSecurity.csrf().disable()
-                .authorizeRequests().anyRequest().permitAll()
-                .and()
-                .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)
-                .and()
-                .formLogin().disable()
-                .addFilterBefore(authenticationFilter(), AuthenticationFilter.class);
 
         return httpSecurity.build();
     }
@@ -114,7 +96,7 @@ public class SecurityConfig{
 
     @Bean
     public AuthenticationSuccessHandler authenticationSuccessHandler(){
-        return new LoginSuccessHandler(jwtUtil);
+        return new LoginSuccessHandler();
     }
 
     @Bean

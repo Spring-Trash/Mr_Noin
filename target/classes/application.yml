@@ -14,8 +14,8 @@ logging:
     root: info
 
 jwt:
-  expmin : 2
-  salt : 1q2w3e4r
+
+
 #mybatis:
 #  type-aliases-package: com.spring.mrnoin.vo
 #  mapper-locations: mybatis/mapper/**/*.xml

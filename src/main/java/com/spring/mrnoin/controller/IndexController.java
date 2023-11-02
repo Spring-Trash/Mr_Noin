@@ -51,7 +51,16 @@ public class IndexController {
     }
 
     @RequestMapping("/tomypage")
-    public String myPage(){
+    public String myPage(Model model){
+        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+
+        if(!authentication.getPrincipal().equals("anonymousUser")) {
+            AccountVO accountVO = accountService.getAccountVOById(authentication.getName());
+            if(accountVO != null) {
+                model.addAttribute("account", accountVO);
+            }
+            System.out.println(accountVO);
+        }
         return "mypage";
     }
 

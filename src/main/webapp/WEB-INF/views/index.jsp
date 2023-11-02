@@ -26,8 +26,8 @@
         <%-- TODO : 대문 바꾸기 --%>
     </div>
     <div class="row d-flex flex-direction-column">
-        <button id="logout" class="btn btn-warning m-3">로그아웃</button>
-        <button id="tomypage" class="btn btn-warning m-3">마이페이지</button>
+        <a href="${root}/logout" class="btn btn-warning m-3">로그아웃</a>
+        <a href="${root}/tomypage" class="btn btn-warning m-3">마이페이지</a>
     </div>
 </div>
 
@@ -38,25 +38,4 @@
 </script>
 </body>
 <%@include file="includes/footer.jsp" %>
-<script>
-    document.getElementById("logout").addEventListener("click", function(){
-        localStorage.removeItem("jwt_Access");
-        localStorage.removeItem("jwt_Refresh");
-        location.href("/tologinpage");
-    })
-
-    document.getElementById("tomypage").addEventListener("click", function(){
-
-        let message = {
-            method : "GET",
-            headers : {
-                "Content-Type" : "application/json",
-                "jwt-auth-token" : localStorage.getItem("jwt_Access"),
-                "jwt-ref-token" : localStorage.getItem("jwt_Refresh"),
-            }
-        }
-
-        fetch("${root}/tomypage", message);
-    })
-</script>
 </html>

@@ -11,10 +11,9 @@
 <body>
 <div class="container">
     <h2>내정보수정</h2>
-    <form method="POST" action="memberupdate">
+    <form method="POST" action="accountupdate">
         <div class="form-floating mb-3">
-            <input readonly type="text" class="form-control" id="floating_input_login_id" name="id"
-                   value="${account.id}">
+            <input readonly type="text" class="form-control" id="floating_input_login_id" name="id" value="${account.id}">
             <label for="floating_input_login_id">ID</label>
         </div>
         <div class="form-floating mb-3">
@@ -22,8 +21,7 @@
             <label for="floating_input_password">Password</label>
         </div>
         <div class="form-floating mb-3">
-            <input type="text" class="form-control" id="floating_input_nickname" name="nickname"
-                   value="${account.nickname}">
+            <input type="text" class="form-control" id="floating_input_nickname" name="nickname" value="${account.nickname}">
             <label for="floating_input_nickname">Nickname</label>
         </div>
         <div class="form-floating mb-3">
@@ -39,7 +37,7 @@
             <label for="floating_input_status">Status</label>
         </div>
         <button class="btn btn-primary">확인</button>
-        <a href="/" class="btn btn-warning">뒤로가기</a>
+        <a href="${root}/tomypage" class="btn btn-warning">뒤로가기</a>
     </form>
 </div>
 <script>

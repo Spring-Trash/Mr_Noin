@@ -39,37 +39,12 @@
         <label for="floating_input_status">Status</label>
     </div>
     <%--    TODO 수정하기 버튼을 완성하세요 (어디로 이동할 지 정하세요)--%>
-    <button id="toupdatepage" class="btn btn-primary">내정보수정</button>
-    <button id="gohome" class="btn btn-warning">뒤로가기</button>
+    <a href="${root}/toupdatepage" class="btn btn-primary">내정보수정</a>
+    <a href="${root}/" class="btn btn-warning">뒤로가기</a>
 </div>
 
 </body>
 <%@include file="includes/footer.jsp" %>
 <script>
-    document.getElementById("toupdatepage").addEventListener("click", function(){
-        let message = {
-            method : "GET",
-            headers : {
-                "Content-Type" : "application/json",
-                "jwt-auth-token" : localStorage.getItem("jwt_Access"),
-                "jwt-ref-token" : localStorage.getItem("jwt_Refresh"),
-            }
-        }
-
-        fetch("${root}/toupdatepage", message);
-    })
-
-    document.getElementById("gohome").addEventListener("click", function(){
-        let message = {
-            method : "GET",
-            headers : {
-                "Content-Type" : "application/json",
-                "jwt-auth-token" : localStorage.getItem("jwt_Access"),
-                "jwt-ref-token" : localStorage.getItem("jwt_Refresh"),
-            }
-        }
-
-        fetch("${root}/", message);
-    })
 </script>
 </html>

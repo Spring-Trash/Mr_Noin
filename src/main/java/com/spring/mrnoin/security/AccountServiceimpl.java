@@ -51,4 +51,9 @@ public class AccountServiceimpl implements AccountService{
         accountVO.setPassword(passwordEncoder.encode(accountVO.getPassword()));
         return accountRepository.signUp(accountVO);
     }
+
+    @Override
+    public int accountUpdate(AccountVO accountVO) {
+        return accountRepository.accountUpdate(accountVO);
+    }
 }
