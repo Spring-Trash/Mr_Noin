@@ -10,4 +10,5 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Spring-Trash</title>
 </head>
+<button id="home"><h2>홈으로</h2></button>
 <c:set var="root" value="${pageContext.servletContext.contextPath}"/>

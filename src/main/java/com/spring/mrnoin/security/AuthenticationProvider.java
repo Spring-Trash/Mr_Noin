@@ -29,7 +29,7 @@ public class AuthenticationProvider implements org.springframework.security.auth
         String userPw = (String) token.getCredentials();
 
         AccountVO accountVO = (AccountVO) userDetailsService.loadUserByUsername(userId);
-
+        log.info("rawPW : {}, encodedPW : {}", userPw, accountVO.getPassword());
         if(passwordEncoder.matches(userPw, accountVO.getPassword())){
             log.info("AccountVO ROLE : {}", accountVO.getRole());
             return new UsernamePasswordAuthenticationToken(userId, userPw, accountVO.getAuthorities());

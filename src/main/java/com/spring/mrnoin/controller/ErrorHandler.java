@@ -21,8 +21,13 @@ public class ErrorHandler implements ErrorController {
         return "error/error";
     }
 
-    @GetMapping("/unauthorized")
-    public ResponseEntity<Void> unauthorized(){
-        return ResponseEntity.status(HttpStatus.UNAUTHORIZED).build();
+//    @GetMapping("/unauthorized")
+//    public ResponseEntity<Void> unauthorized(){
+//        return ResponseEntity.status(HttpStatus.UNAUTHORIZED).build();
+//    }
+
+    @RequestMapping("/error/unauthorized")
+    public String unautorizedUser(){
+        return "redirect:/tologinpage";
     }
 }
