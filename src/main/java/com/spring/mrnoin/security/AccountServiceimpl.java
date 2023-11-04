@@ -54,6 +54,27 @@ public class AccountServiceimpl implements AccountService{
 
     @Override
     public int accountUpdate(AccountVO accountVO) {
-        return accountRepository.accountUpdate(accountVO);
+        log.info("AccountService : accountUpdate");
+        AccountVO origin = (AccountVO) userDetailsService.loadUserByUsername(accountVO.getId());
+        if(accountVO.getPassword() != null || accountVO.getPassword().equals("")){
+            origin.setPassword(passwordEncoder.encode(accountVO.getPassword()));
+        }
+        if(!accountVO.getEmail().equals(origin.getEmail())){
+            origin.setEmail(accountVO.getEmail());
+        }
+        if(accountVO.getAge() != origin.getAge()){
+            origin.setAge(accountVO.getAge());
+        }
+        if(!accountVO.getStatus().equals(origin.getStatus())){
+            origin.setStatus(accountVO.getStatus());
+        }
+        if(!accountVO.getNickname().equals(origin.getNickname())){
+            origin.setNickname(accountVO.getNickname());
+        }
+        if(!accountVO.getName().equals(origin.getName())){
+            origin.setName(accountVO.getName());
+        }
+
+        return accountRepository.accountUpdate(origin);
     }
 }

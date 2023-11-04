@@ -25,6 +25,11 @@
         </div>
 
         <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="floating_input_name" name="name">
+            <label for="floating_input_name">name</label>
+        </div>
+
+        <div class="form-floating mb-3">
             <input type="text" class="form-control" id="floating_input_nickname" name="nickname">
             <label for="floating_input_nickname">nickname</label>
         </div>

@@ -4,42 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f8ae7070-4add-4346-bcaa-aef99c4b0804" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2023-10-25__7_12__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2023-10-25__7_12__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2023-10-28__1_19__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2023-10-28__1_19__Changes_.xml" afterDir="false" />
+    <list default="true" id="f8ae7070-4add-4346-bcaa-aef99c4b0804" name="Changes" comment="[Fix] 에러수정중">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2023-10-25__7_12__Changes_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2023-10-25_오후_7_12_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2023-10-28__1_19__Changes_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2023-10-28_오전_1_19_[Changes]/shelved.patch" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/spring/mrnoin/controller/IndexController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spring/mrnoin/controller/IndexController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/spring/mrnoin/controller/MyPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spring/mrnoin/controller/MyPageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/spring/mrnoin/controller/UpdateController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spring/mrnoin/controller/UpdateController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/spring/mrnoin/httpconfig/WebConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spring/mrnoin/httpconfig/WebConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/spring/mrnoin/security/AccountService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spring/mrnoin/security/AccountService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/spring/mrnoin/repository/AccountRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spring/mrnoin/repository/AccountRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/spring/mrnoin/security/AccountServiceimpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spring/mrnoin/security/AccountServiceimpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/spring/mrnoin/security/AuthConstants.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/spring/mrnoin/security/JwtInterceptor.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/spring/mrnoin/security/JwtUtil.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/spring/mrnoin/security/LoginSuccessHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spring/mrnoin/security/LoginSuccessHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/spring/mrnoin/security/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spring/mrnoin/security/SecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/log-in.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/log-in.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/spring/mrnoin/vo/AccountVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spring/mrnoin/vo/AccountVO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/mypage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/mypage.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/sign-up.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/sign-up.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/update.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/update.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/spring/mrnoin/TokenLoginTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/spring/mrnoin/TokenLoginTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/spring/mrnoin/controller/ErrorHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/spring/mrnoin/controller/ErrorHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/spring/mrnoin/controller/IndexController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/spring/mrnoin/controller/IndexController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/spring/mrnoin/controller/MyPageController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/spring/mrnoin/controller/MyPageController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/spring/mrnoin/controller/RegisterController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/spring/mrnoin/controller/RegisterController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/spring/mrnoin/controller/UpdateController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/spring/mrnoin/controller/UpdateController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/spring/mrnoin/httpconfig/WebConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/spring/mrnoin/httpconfig/WebConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/spring/mrnoin/security/AccountService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/spring/mrnoin/security/AccountService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/spring/mrnoin/repository/AccountRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/spring/mrnoin/repository/AccountRepository.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/spring/mrnoin/security/AccountServiceimpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/spring/mrnoin/security/AccountServiceimpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/spring/mrnoin/security/AuthenticationFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/spring/mrnoin/security/AuthenticationFilter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/spring/mrnoin/security/AuthenticationProvider.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/spring/mrnoin/security/AuthenticationProvider.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/spring/mrnoin/security/LoginFailureHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/spring/mrnoin/security/LoginFailureHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/spring/mrnoin/security/LoginSuccessHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/spring/mrnoin/security/LoginSuccessHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/spring/mrnoin/security/SecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/spring/mrnoin/security/SecurityConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/spring/mrnoin/security/UserDetailsServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/spring/mrnoin/security/UserDetailsServiceImpl.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -175,6 +153,8 @@
       <workItem from="1698503999448" duration="12933000" />
       <workItem from="1698565850674" duration="83000" />
       <workItem from="1698566103711" duration="4775000" />
+      <workItem from="1699023153482" duration="192000" />
+      <workItem from="1699090524022" duration="1159000" />
     </task>
     <task id="LOCAL-00001" summary="[Feat] SpringSecurity 기본 기능 적용 완료">
       <option name="closed" value="true" />
@@ -192,7 +172,15 @@
       <option name="project" value="LOCAL" />
       <updated>1698574755267</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="[Fix] 에러수정중">
+      <option name="closed" value="true" />
+      <created>1698936023397</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1698936023397</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -215,6 +203,7 @@
     </ignored-roots>
     <MESSAGE value="[Feat] SpringSecurity 기본 기능 적용 완료" />
     <MESSAGE value="[Fix] SpringSecurity 절차를 제대로 수행하지 않는 문제 해결" />
-    <option name="LAST_COMMIT_MESSAGE" value="" />
+    <MESSAGE value="[Fix] 에러수정중" />
+    <option name="LAST_COMMIT_MESSAGE" value="[Fix] 에러수정중" />
   </component>
 </project>

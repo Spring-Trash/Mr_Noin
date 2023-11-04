@@ -25,7 +25,11 @@
             <label for="floating_input_nickname">Nickname</label>
         </div>
         <div class="form-floating mb-3">
-            <input type="text" class="form-control" id="floating_input_email" name="email" vaule="${account.email}">
+            <input type="text" class="form-control" id="floating_input_name" name="name" value="${account.name}">
+            <label for="floating_input_name">Name</label>
+        </div>
+        <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="floating_input_email" name="email" value="${account.email}">
             <label for="floating_input_email">Email</label>
         </div>
         <div class="form-floating mb-3">

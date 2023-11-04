@@ -20,6 +20,7 @@ public class AccountVO implements UserDetails {
     private String password;
 
     private String nickname;
+    private String name;
     private String email;
     private int age;
 
