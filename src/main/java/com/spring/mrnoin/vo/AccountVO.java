@@ -9,12 +9,15 @@ import org.springframework.security.core.userdetails.UserDetails;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Date;
 
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
 public class AccountVO implements UserDetails {
+
+    private int no;
 
     private String id;
     private String password;
@@ -23,14 +26,18 @@ public class AccountVO implements UserDetails {
     private String name;
     private String email;
     private int age;
-
+    private int like;
     private String status;
+    private String role;
+
+    private Date signupdate;
+    private Date updatedate;
+    private Date deletedate;
+
     private boolean isAccountNonExpired;
     private boolean isAccountNonLocked;
     private boolean isCredentialsNonExpired;
     private boolean isEnabled;
-
-    private String role;
 
     private Collection<? extends GrantedAuthority> authorities;
 

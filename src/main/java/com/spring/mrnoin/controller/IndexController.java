@@ -38,12 +38,12 @@ public class IndexController {
         String msg = httpServletRequest.getParameter("msg");
         if(!(msg == null) && !(msg.equals(""))) model.addAttribute("msg", msg);
         System.out.println("tologinpage-----------------------------");
-        return "log-in";
+        return "account/log-in";
     }
 
     @RequestMapping("/tosignuppage")
     public String signUpForm(){
-        return "sign-up";
+        return "account/sign-up";
     }
 
     @RequestMapping("/tomypage")
@@ -57,7 +57,7 @@ public class IndexController {
             }
             System.out.println(accountVO);
         }
-        return "mypage";
+        return "account/mypage";
     }
 
     @RequestMapping("/noview")

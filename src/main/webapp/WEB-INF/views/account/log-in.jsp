@@ -1,6 +1,6 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
-<%@include file="includes/header.jsp"%>
+<%@include file="../includes/header.jsp"%>
 <body>
     <div class="container">
         <div style="text-align: center; align-content: center; vertical-align: center; align-items: center">
@@ -36,5 +36,5 @@
     </c:if>
 </script>
 </body>
-<%@include file="includes/footer.jsp"%>
+<%@include file="../includes/footer.jsp"%>
 </html>

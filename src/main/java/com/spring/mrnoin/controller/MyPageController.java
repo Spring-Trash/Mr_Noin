@@ -27,6 +27,6 @@ public class MyPageController {
                 model.addAttribute("account", accountVO);
             }
         }
-        return "update";
+        return "account/update";
     }
 }

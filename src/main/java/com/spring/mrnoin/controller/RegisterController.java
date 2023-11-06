@@ -22,18 +22,18 @@ public class RegisterController {
     public String idDuplicationcheck(String id, Model model){
         if(id == null || "".equals(id)){
             model.addAttribute("msg", "ID를 확인해주세요.");
-            return "sign-up";
+            return "account/sign-up";
         }
 
         AccountVO dupCheck = accountService.getAccountVOById(id);
 
         if(dupCheck == null) {
             model.addAttribute("msg", "중복되지 않은 ID입니다.");
-            return "sign-up";
+            return "account/sign-up";
         }
         else {
             model.addAttribute("msg", "중복된 ID입니다.");
-            return "sign-up";
+            return "account/sign-up";
         }
     }
 
@@ -42,7 +42,7 @@ public class RegisterController {
         System.out.println("register-----------------------------");
         if(bindingResult.hasErrors()){
             model.addAttribute( "msg", "입력정보를 확인해주세요");
-            return "sign-up";
+            return "account/sign-up";
         }
 
         if(accountService.getAccountVOById(accountVO.getUsername()) == null){
@@ -52,11 +52,11 @@ public class RegisterController {
                 return "redirect:/";
             } else {
                 model.addAttribute("msg", "회원가입 실패");
-                return "sign-up";
+                return "account/sign-up";
             }
         } else {
             model.addAttribute("msg", "중복된 ID입니다.");
-            return "sign-up";
+            return "account/sign-up";
         }
     }
 

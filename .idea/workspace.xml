@@ -4,7 +4,34 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f8ae7070-4add-4346-bcaa-aef99c4b0804" name="Changes" comment="[Fix] 에러수정중" />
+    <list default="true" id="f8ae7070-4add-4346-bcaa-aef99c4b0804" name="Changes" comment="[Fix] 에러수정중">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/spring/mrnoin/vo/BoardVO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/spring/mrnoin/vo/CommentVO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/spring/mrnoin/controller/IndexController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spring/mrnoin/controller/IndexController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/spring/mrnoin/controller/MyPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spring/mrnoin/controller/MyPageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/spring/mrnoin/controller/RegisterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spring/mrnoin/controller/RegisterController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/spring/mrnoin/vo/AccountVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spring/mrnoin/vo/AccountVO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/log-in.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/account/log-in.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/mypage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/account/mypage.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/sign-up.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/account/sign-up.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/test.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/account/test.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/update.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/account/update.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/spring/mrnoin/controller/IndexController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/spring/mrnoin/controller/IndexController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/spring/mrnoin/controller/MyPageController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/spring/mrnoin/controller/MyPageController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/spring/mrnoin/controller/RegisterController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/spring/mrnoin/controller/RegisterController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/spring/mrnoin/controller/UpdateController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/spring/mrnoin/controller/UpdateController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/spring/mrnoin/security/AccountService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/spring/mrnoin/security/AccountServiceimpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/spring/mrnoin/security/AuthenticationFilter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/spring/mrnoin/security/AuthenticationProvider.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/spring/mrnoin/security/LoginFailureHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/spring/mrnoin/security/LoginSuccessHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/spring/mrnoin/security/SecurityConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/spring/mrnoin/security/UserDetailsServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/spring/mrnoin/vo/AccountVO$AccountVOBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/spring/mrnoin/vo/AccountVO$AccountVOBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/spring/mrnoin/vo/AccountVO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/spring/mrnoin/vo/AccountVO.class" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -21,7 +48,7 @@
     </option>
   </component>
   <component name="Git.Merge.Settings">
-    <option name="BRANCH" value="origin/dev_one_springsecurity" />
+    <option name="BRANCH" value="origin/main" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
@@ -71,6 +98,7 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\GJ\IdeaProjects\Mr_Noin\src\main\webapp\WEB-INF\views\account" />
       <recent name="C:\Users\GJ\IdeaProjects\Mr_Noin\src\main\webapp" />
       <recent name="C:\Users\GJ\IdeaProjects\Mr_Noin\src\main\webapp\WEB-INF\views" />
       <recent name="C:\Users\GJ\IdeaProjects\Mr_Noin\src\main\java\com\ssafy\controller" />
