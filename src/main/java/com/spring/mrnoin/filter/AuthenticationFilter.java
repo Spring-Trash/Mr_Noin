@@ -20,7 +20,7 @@ import javax.servlet.http.HttpServletResponse;
 // id, pw 기반으로 UserPasswordAuthenticationToken 발급
 public class AuthenticationFilter extends UsernamePasswordAuthenticationFilter {
 
-    PasswordEncoder passwordEncoder;
+    public PasswordEncoder passwordEncoder;
 
     public AuthenticationFilter(AuthenticationManager authenticationManager, PasswordEncoder passwordEncoder){
         super.setAuthenticationManager(authenticationManager);

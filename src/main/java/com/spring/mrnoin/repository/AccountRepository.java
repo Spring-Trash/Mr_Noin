@@ -3,6 +3,7 @@ package com.spring.mrnoin.repository;
 import com.spring.mrnoin.vo.AccountLoginVO;
 import com.spring.mrnoin.vo.AccountVO;
 import org.apache.ibatis.annotations.*;
+import org.springframework.stereotype.Repository;
 
 @Mapper
 public interface AccountRepository {

@@ -19,7 +19,7 @@ public class AuthenticationProvider implements org.springframework.security.auth
     private UserDetailsService userDetailsService;
 
     @Autowired
-    PasswordEncoder passwordEncoder;
+    private PasswordEncoder passwordEncoder;
 
     @Override
     public Authentication authenticate(Authentication authentication) throws AuthenticationException {
