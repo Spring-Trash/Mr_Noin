@@ -1,6 +1,6 @@
 package com.spring.mrnoin.controller;
 
-import com.spring.mrnoin.security.AccountService;
+import com.spring.mrnoin.service.AccountService;
 import com.spring.mrnoin.vo.AccountVO;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;

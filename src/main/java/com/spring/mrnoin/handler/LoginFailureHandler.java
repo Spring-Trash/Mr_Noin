@@ -1,4 +1,4 @@
-package com.spring.mrnoin.security;
+package com.spring.mrnoin.handler;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.context.annotation.Configuration;
