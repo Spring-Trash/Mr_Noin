@@ -66,7 +66,12 @@ public class IndexController {
 
     @GetMapping("/board")
     public String board(){
-        return "";
+        return "board/board";
+    }
+
+    @GetMapping("/notice")
+    public String notice(){
+        return "notice/notice";
     }
 
 }
