@@ -64,11 +64,6 @@ public class IndexController {
     @RequestMapping("/noview")
     public String noview(){return "test"; }
 
-    @GetMapping("/board")
-    public String board(){
-        return "board/board";
-    }
-
     @GetMapping("/notice")
     public String notice(){
         return "notice/notice";
