@@ -7,15 +7,19 @@
 회원은 마이 페이지에서 자신의 정보를 조회할 수 있고, 비밀번호와 닉네임, 상태 메세지를 수정할 수 있습니다.
 
 
-## TODO - LIST
+## TODT - LIST
 
-| 이름                  | O/X |
-|---------------------|-----|
-| MemberRepository 생성 | O   |
-| Controller 구성       | O   |
-| Service 생성          | O   |
-| Repository          | O   |
-| JSP파일 수정            | O   |
+| 이름 | O/X |
+|---|-----|
+|Member Table 생성| O   |
+|MyBatis 관련 Repository 생성| O   |
+|Member 역할(관리자, 사원) 추가| O   |
+|게시판 Table 생성| O   |
+|게시판 기능 생성| O   |
+|공지사항 기능 생성| O   |
+|권한 별 기능 제한| O   |
+|게시판, 공지사항 JSP파일 만들기| O   |
+|게시판 페이징 기능 추가| X   |
 
 ## Git Update Convention
 
