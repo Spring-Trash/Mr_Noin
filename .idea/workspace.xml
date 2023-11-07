@@ -5,25 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f8ae7070-4add-4346-bcaa-aef99c4b0804" name="Changes" comment="[Add] Add Board Controller">
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/board/detail.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/board/list.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/board/regist.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/board/update.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/spring/mrnoin/controller/BoardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spring/mrnoin/controller/BoardController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/spring/mrnoin/controller/IndexController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spring/mrnoin/controller/IndexController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/spring/mrnoin/httpconfig/WebConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spring/mrnoin/config/WebConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/spring/mrnoin/repository/BoardRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spring/mrnoin/repository/BoardRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/spring/mrnoin/vo/AccountVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spring/mrnoin/vo/AccountVO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/spring/mrnoin/vo/BoardVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spring/mrnoin/vo/BoardVO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/board/board.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/spring/mrnoin/controller/IndexController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/spring/mrnoin/controller/IndexController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/spring/mrnoin/controller/MyPageController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/spring/mrnoin/controller/MyPageController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/spring/mrnoin/controller/RegisterController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/spring/mrnoin/controller/RegisterController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/spring/mrnoin/controller/UpdateController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/spring/mrnoin/controller/UpdateController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/spring/mrnoin/vo/AccountVO$AccountVOBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/spring/mrnoin/vo/AccountVO$AccountVOBuilder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/spring/mrnoin/vo/AccountVO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/spring/mrnoin/vo/AccountVO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
