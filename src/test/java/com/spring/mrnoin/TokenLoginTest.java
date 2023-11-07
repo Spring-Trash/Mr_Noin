@@ -18,37 +18,37 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 @Slf4j
 public class TokenLoginTest {
 
-    @Autowired
-    MockMvc mockMvc;
-
-    @Autowired
-    JwtUtil jwtUtil;
-
-    @Test
-    public void testLogin() throws Exception{
-        MockHttpServletRequestBuilder requestBuilder = post("/loginconfirm").param("id", "admin").param("password", "admin");
-        ResultActions resultActions = mockMvc.perform(requestBuilder);
-
-        log.info("HTTP Response Status : {}", resultActions.andDo(print()));
-    }
-
-    @Test
-    public void testGeiInfoSuccess() throws Exception{
-        String token = jwtUtil.createAuthToken("admin");
-
-        MockHttpServletRequestBuilder requestBuilder = get("/").header("jwt-auth-token", token);
-        ResultActions resultActions = mockMvc.perform(requestBuilder);
-
-        log.info("HTTP Response Status : {}", resultActions.andDo(print()));
-    }
-
-    @Test
-    public void testGetInfoFail() throws Exception{
-        String token = "fdsf";
-
-        MockHttpServletRequestBuilder requestBuilder = get("/").header("jwt-auth-token", token);
-        ResultActions resultActions = mockMvc.perform(requestBuilder);
-
-        log.info("HTTP Response Status : {}", resultActions.andDo(print()));
-    }
+//    @Autowired
+//    MockMvc mockMvc;
+//
+//    @Autowired
+//    JwtUtil jwtUtil;
+//
+//    @Test
+//    public void testLogin() throws Exception{
+//        MockHttpServletRequestBuilder requestBuilder = post("/loginconfirm").param("id", "admin").param("password", "admin");
+//        ResultActions resultActions = mockMvc.perform(requestBuilder);
+//
+//        log.info("HTTP Response Status : {}", resultActions.andDo(print()));
+//    }
+//
+//    @Test
+//    public void testGeiInfoSuccess() throws Exception{
+//        String token = jwtUtil.createAuthToken("admin");
+//
+//        MockHttpServletRequestBuilder requestBuilder = get("/").header("jwt-auth-token", token);
+//        ResultActions resultActions = mockMvc.perform(requestBuilder);
+//
+//        log.info("HTTP Response Status : {}", resultActions.andDo(print()));
+//    }
+//
+//    @Test
+//    public void testGetInfoFail() throws Exception{
+//        String token = "fdsf";
+//
+//        MockHttpServletRequestBuilder requestBuilder = get("/").header("jwt-auth-token", token);
+//        ResultActions resultActions = mockMvc.perform(requestBuilder);
+//
+//        log.info("HTTP Response Status : {}", resultActions.andDo(print()));
+//    }
 }

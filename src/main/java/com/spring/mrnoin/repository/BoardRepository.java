@@ -20,6 +20,6 @@ public interface BoardRepository {
     @Update("update board set subject = #{subject}, content = #{content}, updatedate = #{updatedate}")
     int update(BoardVO boardVO);
 
-    @Delete("delete from * where no = #{no}")
+    @Delete("delete from board where no = #{no}")
     int delete(int no);
 }
