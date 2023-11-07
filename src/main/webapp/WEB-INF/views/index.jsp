@@ -28,7 +28,7 @@
     <div class="row d-flex flex-direction-column">
         <a href="${root}/logout" class="btn btn-warning m-3">로그아웃</a>
         <a href="${root}/tomypage" class="btn btn-warning m-3">마이페이지</a>
-        <a href="${root}/board" class="btn btn-warning m-3">게시판</a>
+        <a href="${root}/board/list" class="btn btn-warning m-3">게시판</a>
         <a href="${root}/notice" class="btn btn-warning m-3">공지사항</a>
     </div>
 </div>
