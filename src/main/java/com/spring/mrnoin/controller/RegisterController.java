@@ -16,7 +16,7 @@ import javax.validation.Valid;
 public class RegisterController {
 
     @Autowired
-    AccountService accountService;
+    private AccountService accountService;
 
     @RequestMapping("/iddupcheck")
     public String idDuplicationcheck(String id, Model model){
