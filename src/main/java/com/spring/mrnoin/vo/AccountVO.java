@@ -29,6 +29,7 @@ public class AccountVO implements UserDetails {
     private int like;
     private String status;
     private String role;
+    private String follower;
 
     private Date signupdate;
     private Date updatedate;
