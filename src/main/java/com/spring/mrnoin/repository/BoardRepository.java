@@ -8,7 +8,7 @@ import java.util.List;
 @Mapper
 public interface BoardRepository {
 
-    @Insert("insert into board(no, subject, content, account_no) values(#{no}, #{subject}, #{content}, #{account_no})")
+    @Insert("insert into board(no, subject, content, account_no, nickname) values(#{no}, #{subject}, #{content}, #{account_no}, #{nickname})")
     int regist(BoardVO boardVO);
 
     @Select("select * from board")
@@ -20,6 +20,6 @@ public interface BoardRepository {
     @Update("update board set subject = #{subject}, content = #{content}, updatedate = #{updatedate}")
     int update(BoardVO boardVO);
 
-    @Delete("delete from * where no = #{no}")
+    @Delete("delete from board where no = #{no}")
     int delete(int no);
 }
