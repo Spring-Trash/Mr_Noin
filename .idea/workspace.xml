@@ -4,18 +4,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f8ae7070-4add-4346-bcaa-aef99c4b0804" name="Changes" comment="[Fix] 에러수정중">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/spring/mrnoin/controller/BoardController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/spring/mrnoin/service/BoardServiceImpl.java" afterDir="false" />
+    <list default="true" id="f8ae7070-4add-4346-bcaa-aef99c4b0804" name="Changes" comment="[Add] Add Board Controller">
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/board/detail.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/board/list.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/board/regist.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/board/update.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/spring/mrnoin/controller/BoardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spring/mrnoin/controller/BoardController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/spring/mrnoin/controller/IndexController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spring/mrnoin/controller/IndexController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/spring/mrnoin/controller/RegisterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spring/mrnoin/controller/RegisterController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/spring/mrnoin/controller/UpdateController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spring/mrnoin/controller/UpdateController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/spring/mrnoin/filter/AuthenticationProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spring/mrnoin/filter/AuthenticationProvider.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/spring/mrnoin/service/AccountServiceimpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spring/mrnoin/service/AccountServiceimpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/spring/mrnoin/httpconfig/WebConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spring/mrnoin/config/WebConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/spring/mrnoin/repository/BoardRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spring/mrnoin/repository/BoardRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/spring/mrnoin/vo/AccountVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spring/mrnoin/vo/AccountVO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/spring/mrnoin/vo/BoardVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spring/mrnoin/vo/BoardVO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/board/board.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/index.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/spring/mrnoin/controller/IndexController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/spring/mrnoin/controller/IndexController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/spring/mrnoin/controller/MyPageController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/spring/mrnoin/controller/MyPageController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/spring/mrnoin/controller/RegisterController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/spring/mrnoin/controller/RegisterController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/spring/mrnoin/controller/UpdateController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/spring/mrnoin/controller/UpdateController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/spring/mrnoin/vo/AccountVO$AccountVOBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/spring/mrnoin/vo/AccountVO$AccountVOBuilder.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/spring/mrnoin/vo/AccountVO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/spring/mrnoin/vo/AccountVO.class" afterDir="false" />
     </list>
@@ -189,7 +195,31 @@
       <option name="project" value="LOCAL" />
       <updated>1699248014275</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="[Modify] 전역변수 접근제한자 수정">
+      <option name="closed" value="true" />
+      <created>1699316503831</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1699316503831</updated>
+    </task>
+    <task id="LOCAL-00006" summary="[Add] Add Board Service Implement&#10;&#10;insert&#10;selectAll&#10;selectOneById&#10;Update&#10;Delete">
+      <option name="closed" value="true" />
+      <created>1699316571182</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1699316571182</updated>
+    </task>
+    <task id="LOCAL-00007" summary="[Add] Add Board Controller">
+      <option name="closed" value="true" />
+      <created>1699316600173</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1699316600173</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -214,6 +244,9 @@
     <MESSAGE value="[Fix] SpringSecurity 절차를 제대로 수행하지 않는 문제 해결" />
     <MESSAGE value="[Fix] 에러수정중" />
     <MESSAGE value="[ReFactor] project restructuring&#10;service, config, filter, handler package separated" />
-    <option name="LAST_COMMIT_MESSAGE" value="[ReFactor] project restructuring&#10;service, config, filter, handler package separated" />
+    <MESSAGE value="[Modify] 전역변수 접근제한자 수정" />
+    <MESSAGE value="[Add] Add Board Service Implement&#10;&#10;insert&#10;selectAll&#10;selectOneById&#10;Update&#10;Delete" />
+    <MESSAGE value="[Add] Add Board Controller" />
+    <option name="LAST_COMMIT_MESSAGE" value="[Add] Add Board Controller" />
   </component>
 </project>
