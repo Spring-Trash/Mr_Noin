@@ -33,6 +33,10 @@ public class BoardController {
         List<BoardVO> list = boardService.selectAll();
         model.addAttribute("list", list);
 
+        String userId = SecurityContextHolder.getContext().getAuthentication().getPrincipal().toString();
+        AccountVO accountVO = accountService.getAccountVOById(userId);
+        model.addAttribute("account", accountVO);
+
         return "board/list";
     }
 
@@ -41,6 +45,29 @@ public class BoardController {
         BoardVO boardVO = boardService.seslectByNo(no);
         model.addAttribute("board", boardVO);
         return "board/detail";
+    }
+
+    @GetMapping("/regist/notice")
+    public String registNotice(){
+        return "board/regist-notice";
+    }
+
+    @PostMapping("/regist/regist")
+    public String regist(BoardVO boardVO){
+        String userId = SecurityContextHolder.getContext().getAuthentication().getPrincipal().toString();
+        AccountVO accountVO = accountService.getAccountVOById(userId);
+
+        boardVO.setAccount_no(accountVO.getNo());
+        boardVO.setNickname(accountVO.getNickname());
+        boardVO.setType("notice");
+
+        try {
+            boardService.regist(boardVO);
+        } catch (Exception e){
+            log.info("등록 중 예외 발생 : {}", e.getMessage());
+        }
+
+        return "redirect:/board/list";
     }
 
     @GetMapping("/regist")
@@ -52,9 +79,11 @@ public class BoardController {
     }
 
     @PostMapping("/regist")
-    public String regist(BoardVO boardVO){
+    public String regist(BoardVO boardVO, Model model){
+
         String userId = SecurityContextHolder.getContext().getAuthentication().getPrincipal().toString();
         AccountVO accountVO = accountService.getAccountVOById(userId);
+
         boardVO.setAccount_no(accountVO.getNo());
         boardVO.setNickname(accountVO.getNickname());
 
@@ -70,6 +99,15 @@ public class BoardController {
     @GetMapping("/update")
     public String update(int no, Model model){
         BoardVO boardVO = boardService.seslectByNo(no);
+
+        String userId = SecurityContextHolder.getContext().getAuthentication().getPrincipal().toString();
+        AccountVO accountVO = accountService.getAccountVOById(userId);
+
+        if(boardVO.getType().equals("notice") && accountVO.getRole().equals("USER")){
+            model.addAttribute("msg", "관리자 권한이 필요합니다.");
+            return "redirect:/board/list";
+        }
+
         model.addAttribute("board", boardVO);
         return "board/update";
     }
@@ -95,7 +133,18 @@ public class BoardController {
     }
 
     @GetMapping("/delete")
-    public String delete(int no){
+    public String delete(int no, Model model){
+
+        String userId = SecurityContextHolder.getContext().getAuthentication().getPrincipal().toString();
+        AccountVO accountVO = accountService.getAccountVOById(userId);
+
+        BoardVO boardVO = boardService.seslectByNo(no);
+
+        if(boardVO.getType().equals("notice") && accountVO.getRole().equals("USER")){
+            model.addAttribute("msg", "관리자 권한이 필요합니다.");
+            return "redirect:/list";
+        }
+
         try{
             boardService.delete(no);
         } catch(Exception e){
