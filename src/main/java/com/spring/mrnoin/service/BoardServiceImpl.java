@@ -6,6 +6,8 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
 
 @Service
@@ -13,7 +15,7 @@ import java.util.List;
 public class BoardServiceImpl implements BoardService{
 
     @Autowired
-    BoardRepository boardRepository;
+    private BoardRepository boardRepository;
 
     @Override
     public int regist(BoardVO boardVO) {
@@ -32,11 +34,26 @@ public class BoardServiceImpl implements BoardService{
 
     @Override
     public int update(BoardVO boardVO) {
+
+        BoardVO origin = boardRepository.selectByNo(boardVO.getNo());
+
+        // 업데이트 안되는경우 처리
+
+        if(!origin.getSubject().equals(boardVO.getSubject())){
+            origin.setSubject(boardVO.getSubject());
+        }
+        if(!origin.getContent().equals(boardVO.getContent())){
+            origin.setContent(boardVO.getContent());
+        }
+        Date now = Calendar.getInstance().getTime();
+        origin.setUpdatedate(now);
+
         return boardRepository.update(boardVO);
     }
 
     @Override
     public int delete(int no) {
+        // delete안되는경우 처리
         return boardRepository.delete(no);
     }
 }

@@ -16,9 +16,14 @@ public class BoardVO {
     private int no;
     private String subject;
     private String content;
+    private String type;
     private int account_no;
+    private String nickname;
     private Date registdate;
     private Date updatedate;
     private Date deletedate;
     private int like;
+    private int hit;
+    private String filename;
+    private String filesize;
 }

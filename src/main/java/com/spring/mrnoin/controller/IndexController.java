@@ -18,7 +18,7 @@ import javax.servlet.http.HttpServletRequest;
 public class IndexController {
 
     @Autowired
-    AccountService accountService;
+    private AccountService accountService;
 
     @RequestMapping("/")
     public String home(Model model){
@@ -63,11 +63,6 @@ public class IndexController {
 
     @RequestMapping("/noview")
     public String noview(){return "test"; }
-
-    @GetMapping("/board")
-    public String board(){
-        return "board/board";
-    }
 
     @GetMapping("/notice")
     public String notice(){

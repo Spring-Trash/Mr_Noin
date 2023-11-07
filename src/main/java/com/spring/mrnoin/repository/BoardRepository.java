@@ -8,7 +8,7 @@ import java.util.List;
 @Mapper
 public interface BoardRepository {
 
-    @Insert("insert into board(no, subject, content, account_no) values(#{no}, #{subject}, #{content}, #{account_no})")
+    @Insert("insert into board(no, subject, content, account_no, nickname, type) values(#{no}, #{subject}, #{content}, #{account_no}, #{nickname}, #{type})")
     int regist(BoardVO boardVO);
 
     @Select("select * from board")

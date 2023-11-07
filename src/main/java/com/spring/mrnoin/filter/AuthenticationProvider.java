@@ -9,6 +9,7 @@ import org.springframework.security.core.Authentication;
 import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.web.servlet.HandlerMapping;
 
 import javax.annotation.Resource;
 
@@ -29,7 +30,9 @@ public class AuthenticationProvider implements org.springframework.security.auth
         String userPw = (String) token.getCredentials();
 
         AccountVO accountVO = (AccountVO) userDetailsService.loadUserByUsername(userId);
+
         log.info("rawPW : {}, encodedPW : {}", userPw, accountVO.getPassword());
+
         if(passwordEncoder.matches(userPw, accountVO.getPassword())){
             log.info("AccountVO ROLE : {}", accountVO.getRole());
             return new UsernamePasswordAuthenticationToken(userId, userPw, accountVO.getAuthorities());

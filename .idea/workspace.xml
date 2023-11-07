@@ -4,12 +4,26 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f8ae7070-4add-4346-bcaa-aef99c4b0804" name="Changes" comment="[Modify] Add route to board, notice">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/spring/mrnoin/service/BoardServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/spring/mrnoin/service/BoardServiceImplTest.java" afterDir="false" />
+    <list default="true" id="f8ae7070-4add-4346-bcaa-aef99c4b0804" name="Changes" comment="[Add] Add Board Controller">
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/board/detail.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/board/list.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/board/regist.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/board/update.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/spring/mrnoin/TokenLoginTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/spring/mrnoin/TokenLoginTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/spring/mrnoin/controller/BoardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spring/mrnoin/controller/BoardController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/spring/mrnoin/controller/IndexController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spring/mrnoin/controller/IndexController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/spring/mrnoin/httpconfig/WebConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spring/mrnoin/config/WebConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/spring/mrnoin/repository/BoardRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spring/mrnoin/repository/BoardRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/spring/mrnoin/vo/AccountVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spring/mrnoin/vo/AccountVO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/spring/mrnoin/vo/BoardVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spring/mrnoin/vo/BoardVO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/board/board.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/index.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/spring/mrnoin/controller/IndexController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/spring/mrnoin/controller/IndexController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/spring/mrnoin/controller/MyPageController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/spring/mrnoin/controller/MyPageController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/spring/mrnoin/controller/RegisterController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/spring/mrnoin/controller/RegisterController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/spring/mrnoin/controller/UpdateController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/spring/mrnoin/controller/UpdateController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/spring/mrnoin/vo/AccountVO$AccountVOBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/spring/mrnoin/vo/AccountVO$AccountVOBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/spring/mrnoin/vo/AccountVO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/spring/mrnoin/vo/AccountVO.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,7 +37,6 @@
         <option value="spring-beans.schema" />
         <option value="Interface" />
         <option value="Class" />
-        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -66,8 +79,6 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Users/GJ/Desktop/spring-security-adjh54-develop-main&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -86,94 +97,8 @@
       <recent name="C:\Users\GJ\IdeaProjects\Mr_Noin\src\main\java\com\ssafy\controller" />
       <recent name="C:\Users\GJ\IdeaProjects\Mr_Noin\src\main" />
     </key>
-    <key name="CreateTestDialog.Recents.Supers">
-      <recent name="" />
-    </key>
-    <key name="CreateTestDialog.RecentsKey">
-      <recent name="com.spring.mrnoin.service" />
-    </key>
   </component>
-  <component name="RunManager" selected="JUnit.BoardServiceImplTest.delete">
-    <configuration name="BoardServiceImplTest.delete" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="spring" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.spring.mrnoin.service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.spring.mrnoin.service" />
-      <option name="MAIN_CLASS_NAME" value="com.spring.mrnoin.service.BoardServiceImplTest" />
-      <option name="METHOD_NAME" value="delete" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="BoardServiceImplTest.regist" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="spring" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.spring.mrnoin.service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.spring.mrnoin.service" />
-      <option name="MAIN_CLASS_NAME" value="com.spring.mrnoin.service.BoardServiceImplTest" />
-      <option name="METHOD_NAME" value="regist" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="BoardServiceImplTest.selectAll" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="spring" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.spring.mrnoin.service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.spring.mrnoin.service" />
-      <option name="MAIN_CLASS_NAME" value="com.spring.mrnoin.service.BoardServiceImplTest" />
-      <option name="METHOD_NAME" value="selectAll" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="BoardServiceImplTest.seslectByNo" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="spring" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.spring.mrnoin.service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.spring.mrnoin.service" />
-      <option name="MAIN_CLASS_NAME" value="com.spring.mrnoin.service.BoardServiceImplTest" />
-      <option name="METHOD_NAME" value="seslectByNo" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="BoardServiceImplTest.update" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="spring" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.spring.mrnoin.service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.spring.mrnoin.service" />
-      <option name="MAIN_CLASS_NAME" value="com.spring.mrnoin.service.BoardServiceImplTest" />
-      <option name="METHOD_NAME" value="update" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Spring Boot.StartSpringBoot">
     <configuration name="StartSpringBoot" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="spring" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.spring.mrnoin.StartSpringBoot" />
@@ -204,15 +129,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="JUnit.BoardServiceImplTest.delete" />
-        <item itemvalue="JUnit.BoardServiceImplTest.update" />
-        <item itemvalue="JUnit.BoardServiceImplTest.seslectByNo" />
-        <item itemvalue="JUnit.BoardServiceImplTest.selectAll" />
-        <item itemvalue="JUnit.BoardServiceImplTest.regist" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -246,7 +162,6 @@
       <workItem from="1698566103711" duration="4775000" />
       <workItem from="1699023153482" duration="192000" />
       <workItem from="1699090524022" duration="1159000" />
-      <workItem from="1699359324661" duration="780000" />
     </task>
     <task id="LOCAL-00001" summary="[Feat] SpringSecurity 기본 기능 적용 완료">
       <option name="closed" value="true" />
@@ -272,95 +187,39 @@
       <option name="project" value="LOCAL" />
       <updated>1698936023397</updated>
     </task>
-    <task id="LOCAL-00004" summary="[Fix] 경로설정 및 폴더구조변경">
+    <task id="LOCAL-00004" summary="[ReFactor] project restructuring&#10;service, config, filter, handler package separated">
       <option name="closed" value="true" />
-      <created>1699265359130</created>
+      <created>1699248014275</created>
       <option name="number" value="00004" />
       <option name="presentableId" value="LOCAL-00004" />
       <option name="project" value="LOCAL" />
-      <updated>1699265359130</updated>
+      <updated>1699248014275</updated>
     </task>
-    <task id="LOCAL-00005" summary="[ADD] Add buttons to going board, notice">
+    <task id="LOCAL-00005" summary="[Modify] 전역변수 접근제한자 수정">
       <option name="closed" value="true" />
-      <created>1699265585922</created>
+      <created>1699316503831</created>
       <option name="number" value="00005" />
       <option name="presentableId" value="LOCAL-00005" />
       <option name="project" value="LOCAL" />
-      <updated>1699265585922</updated>
+      <updated>1699316503831</updated>
     </task>
-    <task id="LOCAL-00006" summary="[ADD] Add board jsp file">
+    <task id="LOCAL-00006" summary="[Add] Add Board Service Implement&#10;&#10;insert&#10;selectAll&#10;selectOneById&#10;Update&#10;Delete">
       <option name="closed" value="true" />
-      <created>1699265607222</created>
+      <created>1699316571182</created>
       <option name="number" value="00006" />
       <option name="presentableId" value="LOCAL-00006" />
       <option name="project" value="LOCAL" />
-      <updated>1699265607222</updated>
+      <updated>1699316571182</updated>
     </task>
-    <task id="LOCAL-00007" summary="[ADD] Add notice jsp file">
+    <task id="LOCAL-00007" summary="[Add] Add Board Controller">
       <option name="closed" value="true" />
-      <created>1699265642261</created>
+      <created>1699316600173</created>
       <option name="number" value="00007" />
       <option name="presentableId" value="LOCAL-00007" />
       <option name="project" value="LOCAL" />
-      <updated>1699265642261</updated>
+      <updated>1699316600173</updated>
     </task>
-    <task id="LOCAL-00008" summary="[ADD] Add methods to going board, notice">
-      <option name="closed" value="true" />
-      <created>1699265664107</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1699265664107</updated>
-    </task>
-    <task id="LOCAL-00009" summary="[Modify] Notice, Board file modify">
-      <option name="closed" value="true" />
-      <created>1699267156883</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1699267156884</updated>
-    </task>
-    <task id="LOCAL-00010" summary="[Modify] PasswordEncoder add constructor">
-      <option name="closed" value="true" />
-      <created>1699267302478</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1699267302478</updated>
-    </task>
-    <task id="LOCAL-00011" summary="[Modify] PasswordEncoder add constructor">
-      <option name="closed" value="true" />
-      <created>1699267343208</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1699267343208</updated>
-    </task>
-    <task id="LOCAL-00012" summary="[ADD] Add BoardRepository&#10;&#10;Board insert&#10;Board return all&#10;Board return one by id&#10;Board update one&#10;Board delete one">
-      <option name="closed" value="true" />
-      <created>1699267432334</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1699267432334</updated>
-    </task>
-    <task id="LOCAL-00013" summary="[ADD] Add BoardService to connect with BoardRepository">
-      <option name="closed" value="true" />
-      <created>1699267474183</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1699267474183</updated>
-    </task>
-    <task id="LOCAL-00014" summary="[Modify] Add route to board, notice">
-      <option name="closed" value="true" />
-      <created>1699267524391</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1699267524391</updated>
-    </task>
-    <option name="localTasksCounter" value="15" />
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -384,16 +243,10 @@
     <MESSAGE value="[Feat] SpringSecurity 기본 기능 적용 완료" />
     <MESSAGE value="[Fix] SpringSecurity 절차를 제대로 수행하지 않는 문제 해결" />
     <MESSAGE value="[Fix] 에러수정중" />
-    <MESSAGE value="[Fix] 경로설정 및 폴더구조변경" />
-    <MESSAGE value="[ADD] Add buttons to going board, notice" />
-    <MESSAGE value="[ADD] Add board jsp file" />
-    <MESSAGE value="[ADD] Add notice jsp file" />
-    <MESSAGE value="[ADD] Add methods to going board, notice" />
-    <MESSAGE value="[Modify] Notice, Board file modify" />
-    <MESSAGE value="[Modify] PasswordEncoder add constructor" />
-    <MESSAGE value="[ADD] Add BoardRepository&#10;&#10;Board insert&#10;Board return all&#10;Board return one by id&#10;Board update one&#10;Board delete one" />
-    <MESSAGE value="[ADD] Add BoardService to connect with BoardRepository" />
-    <MESSAGE value="[Modify] Add route to board, notice" />
-    <option name="LAST_COMMIT_MESSAGE" value="[Modify] Add route to board, notice" />
+    <MESSAGE value="[ReFactor] project restructuring&#10;service, config, filter, handler package separated" />
+    <MESSAGE value="[Modify] 전역변수 접근제한자 수정" />
+    <MESSAGE value="[Add] Add Board Service Implement&#10;&#10;insert&#10;selectAll&#10;selectOneById&#10;Update&#10;Delete" />
+    <MESSAGE value="[Add] Add Board Controller" />
+    <option name="LAST_COMMIT_MESSAGE" value="[Add] Add Board Controller" />
   </component>
 </project>

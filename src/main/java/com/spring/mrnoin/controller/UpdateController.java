@@ -17,7 +17,7 @@ import javax.validation.Valid;
 public class UpdateController {
 
     @Autowired
-    AccountService accountService;
+    private AccountService accountService;
 
     @RequestMapping("/accountupdate")
     public String memberUpdate(@Valid AccountVO accountVO, BindingResult bindingResult, Model model, HttpSession session){

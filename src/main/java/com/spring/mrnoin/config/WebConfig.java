@@ -1,4 +1,4 @@
-package com.spring.mrnoin.httpconfig;
+package com.spring.mrnoin.config;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
