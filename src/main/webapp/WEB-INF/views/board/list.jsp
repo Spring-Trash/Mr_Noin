@@ -19,7 +19,7 @@
                 <tr>
                     <c:forEach items="${list}" var="list">
                         <td>${list.no}</td>
-                        <td><a href="${root}/board/detail?no=${list.no}">${list.subject}</a></td>
+                        <td><a href="${root}/board/detail?no=${list.no}">[${list.type}]${list.subject}</a></td>
                         <td>${list.nickname}</td>
                         <td>${list.registdate}</td>
                     </c:forEach>
@@ -31,6 +31,10 @@
     <div class="row d-flex flex-direction-column">
         <a href="${root}/board/regist" class="btn btn-warning m-3">글쓰기</a>
         <a href="${root}/" class="btn btn-warning m-3">홈으로</a>
+
+        <c:if test="${account.role == 'ADMIN'}">
+            <a href="${root}/board/regist/notice?role=${account.role}" class="btn btn-warning m-3">공지사항 등록</a>
+        </c:if>
     </div>
 </div>
 
