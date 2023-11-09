@@ -15,25 +15,17 @@
                     <td>등록일</td>
                 </tr>
             </thead>
-            <tbody>
-                <tr>
-                    <c:forEach items="${list}" var="list">
-                        <td>${list.no}</td>
-                        <td><a href="${root}/board/detail?no=${list.no}">[${list.type}]${list.subject}</a></td>
-                        <td>${list.nickname}</td>
-                        <td>${list.registdate}</td>
-                    </c:forEach>
-                </tr>
+            <tbody id="list">
             </tbody>
         </table>
 
     </div>
     <div class="row d-flex flex-direction-column">
         <a href="${root}/board/regist" class="btn btn-warning m-3">글쓰기</a>
-        <a href="${root}/" class="btn btn-warning m-3">홈으로</a>
+        <a href="${root}/page" class="btn btn-warning m-3">홈으로</a>
 
         <c:if test="${account.role == 'ADMIN'}">
-            <a href="${root}/board/regist/notice?role=${account.role}" class="btn btn-warning m-3">공지사항 등록</a>
+            <a href="${root}/page/notice/regist" class="btn btn-warning m-3">공지사항 등록</a>
         </c:if>
     </div>
 </div>
@@ -42,6 +34,23 @@
     <c:if test="${!empty msg}">
     alert("${msg}");
     </c:if>
+
+    fetch("http://localhost:8080/board")
+    .then((response) => response.json())
+    .then((data) => data.body.list)
+    .then((list) => {
+        let tbody = ``;
+        for(item of list){
+            tbody +=
+                `<tr>` +
+                `<td>` + item.no + `</td>` +
+                `<td><a href="http://localhost:8080/board/` + item.no + `">[` + item.type + `]` + item.subject + `</a></td>` +
+                `<td>` + item.nickname + `</td>` +
+                `<td>` + item.registdate + `</td>` +
+                `</tr>`;
+        }
+        document.querySelector("#list").innerHTML = tbody;
+    })
 </script>
 </body>
 <%@include file="../includes/footer.jsp" %>

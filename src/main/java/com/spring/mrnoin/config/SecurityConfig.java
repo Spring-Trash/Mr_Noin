@@ -8,6 +8,7 @@ import com.spring.mrnoin.handler.LoginSuccessHandler;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.http.HttpMethod;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.ProviderManager;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
@@ -35,7 +36,8 @@ public class SecurityConfig{
 
         // 로그인, 회원가입 페이지 인가
         // 정적자원 인가
-        httpSecurity.authorizeRequests().antMatchers("/tologinpage", "/tosignuppage", "/status", "/iddupcheck", "/register").permitAll();
+        httpSecurity.authorizeRequests().antMatchers("/page/account/login", "/page/account/signup", "/status", "/iddupcheck").permitAll();
+        httpSecurity.authorizeRequests().antMatchers(HttpMethod.POST, "/account").permitAll();
         httpSecurity.authorizeRequests().antMatchers("/resources/**").permitAll();
         httpSecurity.authorizeRequests().anyRequest().authenticated();
 
@@ -46,15 +48,15 @@ public class SecurityConfig{
 
         // 로그인 설정 및 로그인 시도시 필터 등록
         httpSecurity.formLogin()
-                .loginPage("/tologinpage").loginProcessingUrl("/tologinpage")
+                .loginPage("/page/account/login").loginProcessingUrl("/page/account/login")
                 .usernameParameter("id").passwordParameter("password")
-                .defaultSuccessUrl("/").failureUrl("/tologinpage")
+                .defaultSuccessUrl("/").failureUrl("/page/account/login")
                 .and().addFilterBefore(authenticationFilter(), UsernamePasswordAuthenticationFilter.class);
 
         // 로그아웃 설정
         httpSecurity.logout()
-                .invalidateHttpSession(true).logoutUrl("/logout")
-                .logoutSuccessUrl("/tologinpage").deleteCookies("JSESSIONID", "remember-me");
+                .invalidateHttpSession(true).logoutUrl("/page/account/logout")
+                .logoutSuccessUrl("/page/account/login").deleteCookies("JSESSIONID", "remember-me");
 
         return httpSecurity.build();
     }
@@ -76,7 +78,7 @@ public class SecurityConfig{
     @Bean
     public AuthenticationFilter authenticationFilter() throws Exception{
         AuthenticationFilter authenticationFilter = new AuthenticationFilter(authenticationManager(), passwordEncoder());
-        authenticationFilter.setFilterProcessesUrl("/loginconfirm");
+        authenticationFilter.setFilterProcessesUrl("/login");
         authenticationFilter.setAuthenticationSuccessHandler(authenticationSuccessHandler());
         authenticationFilter.setAuthenticationFailureHandler(authenticationFailureHandler());
         authenticationFilter.afterPropertiesSet();

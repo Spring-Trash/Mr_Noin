@@ -28,7 +28,7 @@
     </form>
     <div class="row d-flex flex-direction-column">
         <a href="${root}/board/delete?no=${board.no}" class="btn btn-warning m-3">글삭제</a>
-        <a href="${root}/" class="btn btn-warning m-3">홈으로</a>
+        <a href="${root}/page" class="btn btn-warning m-3">홈으로</a>
     </div>
 </div>
 

@@ -16,7 +16,7 @@
             </div>
         </div>
         <br><br><hr><br>
-        <form method="post" action="loginconfirm">
+        <form method="post" action="login">
             <div class="form-floating mb-3">
                 <input type="text" class="form-control" id="floating_input_login_id" name="id">
                 <label for="floating_input_login_id">ID</label>
@@ -26,9 +26,9 @@
                 <label for="floating_input_password">Password</label>
             </div>
             <button type="submit" class="btn btn-primary">전송</button>
-            <a href="/" class="btn btn-danger">뒤로가기</a>
+            <a href="${root}/page" class="btn btn-danger">홈으로</a>
         </form>
-        <a href="/tosignuppage" class="btn btn-primary">회원가입</a>
+        <a href="${root}/page/account/signup" class="btn btn-primary">회원가입</a>
     </div>
 <script>
     <c:if test="${!empty msg}">

@@ -23,7 +23,7 @@
             <label for="nickname">글쓴이</label>
         </div>
         <button type="submit" class="btn btn-primary">전송</button>
-        <a href="/" class="btn btn-danger">뒤로가기</a>
+        <a href="${root}/page" class="btn btn-danger">홈으로</a>
     </form>
 
 </div>

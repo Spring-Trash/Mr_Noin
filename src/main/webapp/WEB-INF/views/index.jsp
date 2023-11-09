@@ -26,9 +26,9 @@
         <%-- TODO : 대문 바꾸기 --%>
     </div>
     <div class="row d-flex flex-direction-column">
-        <a href="${root}/logout" class="btn btn-warning m-3">로그아웃</a>
-        <a href="${root}/tomypage" class="btn btn-warning m-3">마이페이지</a>
-        <a href="${root}/board/list" class="btn btn-warning m-3">게시판</a>
+        <a href="${root}/page/account/logout" class="btn btn-warning m-3">로그아웃</a>
+        <a href="${root}/page/account/mypage" class="btn btn-warning m-3">마이페이지</a>
+        <a href="${root}/page/board/list" class="btn btn-warning m-3">게시판</a>
     </div>
 </div>
 

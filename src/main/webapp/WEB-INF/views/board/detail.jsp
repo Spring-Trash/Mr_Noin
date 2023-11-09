@@ -23,7 +23,7 @@
 
     <div class="row d-flex flex-direction-column">
         <a href="${root}/board/update?no=${board.no}" class="btn btn-warning m-3">글수정</a>
-        <a href="${root}/" class="btn btn-warning m-3">홈으로</a>
+        <a href="${root}/page" class="btn btn-warning m-3">홈으로</a>
     </div>
 
 </div>

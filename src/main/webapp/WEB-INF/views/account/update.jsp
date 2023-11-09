@@ -11,7 +11,7 @@
 <body>
 <div class="container">
     <h2>내정보수정</h2>
-    <form method="POST" action="accountupdate">
+    <form>
         <div class="form-floating mb-3">
             <input readonly type="text" class="form-control" id="floating_input_login_id" name="id" value="${account.id}">
             <label for="floating_input_login_id">ID</label>
@@ -40,14 +40,63 @@
             <input type="text" class="form-control" id="floating_input_status" name="status" value="${account.status}">
             <label for="floating_input_status">Status</label>
         </div>
-        <button class="btn btn-primary">확인</button>
-        <a href="${root}/tomypage" class="btn btn-warning">뒤로가기</a>
+        <button type="button" class="btn btn-primary" id="updatebutton">내정보수정</button>
+        <a href="${root}/page" class="btn btn-warning">홈으로</a>
     </form>
 </div>
 <script>
     <c:if test="${!empty msg}">
         alert("${msg}");
     </c:if>
+
+    fetch("http://localhost:8080/account")
+        .then((response) => response.json())
+        .then((data) => {
+            if(data.account != null && data.account != ""){
+                document.querySelector("#floating_input_login_id").value = data.account.id;
+                document.querySelector("#floating_input_password").value = data.account.password;
+                document.querySelector("#floating_input_nickname").value = data.account.nickname;
+                document.querySelector("#floating_input_name").value = data.account.name;
+                document.querySelector("#floating_input_email").value = data.account.email;
+                document.querySelector("#floating_input_age").value = data.account.age;
+                document.querySelector("#floating_input_status").value = data.account.status;
+            }
+        })
+
+    document.querySelector("#updatebutton").addEventListener("click", function(){
+        let id = document.querySelector("#floating_input_login_id").value;
+        let password = document.querySelector("#floating_input_password").value;
+        let email = document.querySelector("#floating_input_email").value;
+        let name = document.querySelector("#floating_input_name").value;
+        let nickname = document.querySelector("#floating_input_nickname").value;
+        let age = document.querySelector("#floating_input_age").value;
+        let status = document.querySelector("#floating_input_status").value;
+
+        let body = {
+            "id" : id,
+            "password" : password,
+            "email" : email,
+            "name" : name,
+            "nickname" : nickname,
+            "age" : age,
+            "status" : status,
+        }
+
+        let message = {
+            method : "PUT",
+            headers : {
+                "Content-Type" : "application/json",
+            },
+            body : JSON.stringify(body),
+        }
+
+        fetch("http://localhost:8080/account", message)
+            .then((response) => {
+                if(response.ok){
+                    location.href = "http://localhost:8080/";
+                }
+            })
+    })
 </script>
 </body>
 <%@include file="../includes/footer.jsp" %>
